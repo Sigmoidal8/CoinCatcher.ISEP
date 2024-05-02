@@ -1,0 +1,205 @@
+{
+    "items": [
+        {
+            "key": "welcome_message",
+            "value": "Bem-vindo"
+        },
+        {
+            "key": "play_button",
+            "value": "Começar"
+        },
+        {
+            "key": "settings_button",
+            "value": "Configurações"
+        },
+        {
+            "key": "quit_button",
+            "value": "Sair"
+        },
+        {
+            "key": "close_button",
+            "value": "Fechar"
+        },
+        {
+            "key": "next_button",
+            "value": "Proximo"
+        },
+        {
+            "key": "language",
+            "value": "Linguagem:"
+        },
+        {
+            "key": "arrow_message",
+            "value": "Ir para "
+        },
+        {
+            "key": "end_text",
+            "value": "Fim"
+        },
+        {
+            "key": "Tutorial",
+            "value": "Tutorial"
+        },
+        {
+            "key": "House",
+            "value": "Casa"
+        },
+        {
+            "key": "Metro",
+            "value": "Metro"
+        },
+        {
+            "key": "Avenue",
+            "value": "Avenida"
+        },
+        {
+            "key": "Street",
+            "value": "Rua"
+        },
+        {
+            "key": "tutorial_message1",
+            "value": "Bem-vindo ao Coin Catcher! Neste jogo o teu objetivo é apanhar "
+        },
+        {
+            "key": "tutorial_message1_1",
+            "value": " moedas enquanto exploras."
+        },
+        {
+            "key": "tutorial_message2",
+            "value": "Podes utilizar o joystick no lado esquerdo do ecrã para te deslocares. Arrasta o dedo no lado direito do ecrã para mudar o local para onde estás a olhar!"
+        },
+        {
+            "key": "tutorial_message3",
+            "value": "Para apanhar uma moeda só tens de clicar nela! Experimenta. Tenta encontrar uma moeda!"
+        },
+        {
+            "key": "tutorial_message4",
+            "value": "Bom trabalho, é isso! Para terminar o tutorial, basta encontrar as outras quatro moedas! Boa sorte!"
+        },
+        {
+            "key": "tutorial_message5",
+            "value": "Concluiste o tutorial, podes agora avançar para o jogo!"
+        },
+        {
+            "key": "introduction_message",
+            "value": "Olá, eu sou o Miguel! Infelizmente o meu pai morreu há dois dias e não consigo encontrar o relógio dele porque sou cego. Podes me ajudar a encontrá-lo? Deve estar algures pela casa..."
+        },
+        {
+            "key": "introduction_message_button1",
+            "value": "Sim, Miguel. Eu vou encontrar o relógio!"
+        },
+        {
+            "key": "introduction_message_button2",
+            "value": "Lamento, mas não tenho tempo para isso"
+        },
+        {
+            "key": "watch_dilema_message",
+            "value": "O que é que quer fazer?"
+        },
+        {
+            "key": "watch_dilema_message_button1",
+            "value": "Devolver o relógio ao Miguel"
+        },
+        {
+            "key": "watch_dilema_message_button2",
+            "value": "Vender o relógio por 3 moedas"
+        },
+        {
+            "key": "watch_dilema_closing_message",
+            "value": "Muito obrigado por me teres devolvido o relógio, és incrível!"
+        },
+        {
+            "key": "homeless_dilema_message",
+            "value": "O que é que quer fazer?"
+        },
+        {
+            "key": "homeless_dilema_message_button1",
+            "value": "Dar 2 moedas ao sem-abrigo"
+        },
+        {
+            "key": "homeless_dilema_message_button2",
+            "value": "Tirar as 3 moedas do sem-abrigo"
+        },
+        {
+            "key": "homeless_dilema_message_button3",
+            "value": "Ignorar"
+        },
+        {
+            "key": "robbery_dilema_message",
+          
+            "value": "O idoso acabou de ser assaltado, o que é que queres fazer?"
+        },
+        {
+            "key": "robbery_dilema_message_button1",
+            "value": "Seguir o ladrão"
+        },
+        {
+            "key": "robbery_dilema_message_button2",
+            "value": "Nada porque tenho medo de me magoar"
+        },
+        {
+            "key": "robbery_dilema_message_button3",
+            "value": "Nada porque o problema não é meu"
+        },
+        {
+            "key": "thief_dilema_message",
+            "value": "Peço desculpa, mas preciso deste dinheiro para alimentar os meus dois filhos. Há muito tempo que tento arranjar um emprego, mas ninguém me aceita..."
+        },
+        {
+            "key": "thief_dilema_message2",
+            "value": "O que é que quer fazer?"
+        },
+        {
+            "key": "thief_dilema_message_button1",
+            "value": "Pegar no dinheiro e devolver ao idoso"
+        },
+        {
+            "key": "thief_dilema_message_button2",
+            "value": "Pegar no dinheiro e ficar com as 3 moedas"
+        },
+        {
+            "key": "thief_dilema_message_button3",
+            "value": "Pegar no dinheiro e devolver ao idoso e dar 3 moedas a este homem"
+        },
+        {
+            "key": "thief_dilema_message_button4",
+            "value": "Deixar o homem ficar com o dinheiro"
+        },
+        {
+            "key": "info_panel_message1",
+            "value": "Para terminares o jogo precisas de encontrar as "
+        },
+        {
+            "key": "info_panel_message2",
+            "value": " moedas"
+        },
+        {
+            "key": "morality_result",
+            "value": "Tempo: "
+        },
+        {
+            "key": "moral_result_1",
+            "value": "O indivíduo revela falta de empatia e integridade, recorrendo frequentemente a acções egoístas sem ter em conta as consequências para os outros. As suas escolhas dão prioridade ao ganho pessoal em detrimento da justiça e da cooperação. Pode exibir traços de manipulação ou engano, mostrando pouca consideração pelo bem-estar ou pelos direitos dos outros."
+        },
+        {
+            "key": "moral_result_2",
+            "value": "A pessoa demonstra uma postura moral mista, por vezes demonstrando empatia e altruísmo, mas ocasionalmente sucumbindo ao interesse próprio ou a atalhos éticos. As suas decisões podem variar em consistência, reflectindo uma mistura de comportamentos virtuosos e moralmente ambíguos. Embora se esforce por ser justo e bondoso, pode vacilar em situações que ponham à prova a sua determinação ou apresentem tentações pessoais."
+        },
+        {
+            "key": "moral_result_3",
+            "value": "Este indivíduo defende consistentemente princípios de integridade, compaixão e justiça nas suas acções no jogo. Dá prioridade ao bem-estar dos outros, demonstrando empatia, honestidade e um compromisso com a conduta ética. As suas escolhas reflectem uma forte bússola moral, guiada por um sentido de responsabilidade para com os outros jogadores e para com o ambiente do jogo como um todo."
+        },
+        {
+            "key": "coins_missing_on_scene",
+            "value": "Esta cena ainda tem a seguinte quantidade de moedas para apanhar: "
+        },
+        {
+            "key": "no_coins_missing_on_scene",
+            "value": "Todas as moedas desta cena foram recolhidas."
+        },
+        {
+            "key": "alert",
+            "value": "Preencha o username"
+        }
+    ]
+}

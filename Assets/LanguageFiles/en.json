@@ -1,0 +1,204 @@
+{
+    "items": [
+        {
+            "key": "welcome_message",
+            "value": "Welcome"
+        },
+        {
+            "key": "play_button",
+            "value": "Start"
+        },
+        {
+            "key": "settings_button",
+            "value": "Settings"
+        },
+        {
+            "key": "quit_button",
+            "value": "Quit"
+        },
+        {
+            "key": "close_button",
+            "value": "Close"
+        },
+        {
+            "key": "next_button",
+            "value": "Next"
+        },
+        {
+            "key": "language",
+            "value": "Language:"
+        },
+        {
+            "key": "arrow_message",
+            "value": "Go to "
+        },
+        {
+            "key": "end_text",
+            "value": "The End"
+        },
+        {
+            "key": "Tutorial",
+            "value": "Tutorial"
+        },
+        {
+            "key": "House",
+            "value": "House"
+        },
+        {
+            "key": "Metro",
+            "value": "Metro"
+        },
+        {
+            "key": "Avenue",
+            "value": "Avenue"
+        },
+        {
+            "key": "Street",
+            "value": "Street"
+        },
+        {
+            "key": "tutorial_message1",
+            "value": "Welcome to Coin Catcher! In this game, your goal is to catch "
+        },
+        {
+            "key": "tutorial_message1_1",
+            "value": " coins while exploring the map."
+        },
+        {
+            "key": "tutorial_message2",
+            "value": "You can you use the joystick on the left of the screen to move. Drag your finger on the right side of the screen to change where you are looking!"
+        },
+        {
+            "key": "tutorial_message3",
+            "value": "To catch a coin all you have to do is click on it! Give it a try. Try to find a coin!"
+        },
+        {
+            "key": "tutorial_message4",
+            "value": "Good job, that's it! To finish the tutorial just find the other four coins! Good luck!"
+        },
+        {
+            "key": "tutorial_message5",
+            "value": "You've completed the tutorial, you may now proceed to the game!"
+        },
+        {
+            "key": "introduction_message",
+            "value": "Hi, I'm Michael! Unfortunately my dad died two days ago and I can't find his watch because I'm blind. Could you please help me find it? It should be around the house somewhere..."
+        },
+        {
+            "key": "introduction_message_button1",
+            "value": "Yes, Michael. I'll find the watch!"
+        },
+        {
+            "key": "introduction_message_button2",
+            "value": "Sorry, I don't have time for that"
+        },
+        {
+            "key": "watch_dilema_message",
+            "value": "What do you want to do?"
+        },
+        {
+            "key": "watch_dilema_message_button1",
+            "value": "Give the watch back to Michael"
+        },
+        {
+            "key": "watch_dilema_message_button2",
+            "value": "Sell the watch for 3 coins"
+        },
+        {
+            "key": "watch_dilema_closing_message",
+            "value": "Thank you so much for giving me back the watch, you are awesome!"
+        },
+        {
+            "key": "homeless_dilema_message",
+            "value": "What do you want to do?"
+        },
+        {
+            "key": "homeless_dilema_message_button1",
+            "value": "Give the homeless 2 coins"
+        },
+        {
+            "key": "homeless_dilema_message_button2",
+            "value": "Take the 3 coins from the homeless"
+        },
+        {
+            "key": "homeless_dilema_message_button3",
+            "value": "Ignore"
+        },
+        {
+            "key": "robbery_dilema_message",
+            "value": "The old man has just been mugged, what do you want to do?"
+        },
+        {
+            "key": "robbery_dilema_message_button1",
+            "value": "Follow the thief"
+        },
+        {
+            "key": "robbery_dilema_message_button2",
+            "value": "Nothing because I'm scared of hurting myself"
+        },
+        {
+            "key": "robbery_dilema_message_button3",
+            "value": "Nothing because it's not my problem"
+        },
+        {
+            "key": "thief_dilema_message",
+            "value": "I'm sorry but I need this money to feed both my sons, I've been trying to get a job for a long time but no one accepts me..."
+        },
+        {
+            "key": "thief_dilema_message2",
+            "value": "What do you want to do?"
+        },
+        {
+            "key": "thief_dilema_message_button1",
+            "value": "Take the money back to the old man"
+        },
+        {
+            "key": "thief_dilema_message_button2",
+            "value": "Take the money and keep the 3 coins"
+        },
+        {
+            "key": "thief_dilema_message_button3",
+            "value": "Take the money back to the old man and give 3 coins to this man"
+        },
+        {
+            "key": "thief_dilema_message_button4",
+            "value": "Let him take the money"
+        },
+        {
+            "key": "info_panel_message1",
+            "value": "To finish the game you need to find the "
+        },
+        {
+            "key": "info_panel_message2",
+            "value": " coins"
+        },
+        {
+            "key": "morality_result",
+            "value": "Time: "
+        },
+        {
+            "key": "moral_result_1",
+            "value": "The individual displays a lack of empathy and integrity, often resorting to selfish actions without consideration for the consequences on others. Their choices prioritize personal gain at the expense of fairness and cooperation. They may exhibit traits of manipulation or deceit, showing little regard for the well-being or rights of others."
+        },
+        {
+            "key": "moral_result_2",
+            "value": "The person demonstrates a mixed moral stance, sometimes displaying empathy and altruism, but occasionally succumbing to self-interest or ethical shortcuts. Their decisions may vary in consistency, reflecting a blend of virtuous and morally ambiguous behaviors. While they strive for fairness and kindness, they may falter in situations that test their resolve or present personal temptations."
+        },
+        {
+            "key": "moral_result_3",
+            "value": "This individual consistently upholds principles of integrity, compassion, and fairness in their actions within the game. They prioritize the well-being of others, demonstrating empathy, honesty, and a commitment to ethical conduct. Their choices reflect a strong moral compass, guided by a sense of responsibility towards fellow players and the game environment as a whole. They serve as a positive role model, inspiring others with their ethical behavior."
+        },
+        {
+            "key": "coins_missing_on_scene",
+            "value": "This scene still has the following amount of coins to be collected: "
+        },
+        {
+            "key": "no_coins_missing_on_scene",
+            "value": "All coins on this scene have been collected."
+        },
+        {
+            "key": "alert",
+            "value": "Fill in the username"
+        }
+    ]
+}
