@@ -455,7 +455,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 73440876b031b62409c0bc5200b62c36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1105,10 +1105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &258745192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5737465129185072096, guid: b9b690ee15a576241a99d7d7c32a6ec5, type: 3}
@@ -1172,6 +1172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 275183755}
+  - component: {fileID: 275183756}
   m_Layer: 0
   m_Name: Blockers
   m_TagString: Untagged
@@ -1199,6 +1200,24 @@ Transform:
   - {fileID: 1291396136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &275183756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275183754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4546e3eb685eba439d97069b76f3d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1439759040}
+  BlockerColliders:
+  - {fileID: 2049374858}
+  - {fileID: 1291396137}
+  - {fileID: 84801953}
+  VisibleDistance: 1.5
 --- !u!1 &280470988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,11 +2364,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd99f7c3123bb354dad83eab801cb2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quitButton: {fileID: 6827586}
+  QuitButton: {fileID: 6827586}
   HelpDilemmaMessage: {fileID: 1075442720}
   HelpDilemmaMessageClose: {fileID: 1729268840}
-  audioSource: {fileID: 550452614}
-  audioClip: {fileID: 8300000, guid: 4d0a61240a3c9eb4a851985011bff84e, type: 3}
+  AudioSource: {fileID: 550452614}
+  AudioClip: {fileID: 8300000, guid: 4d0a61240a3c9eb4a851985011bff84e, type: 3}
   HomelessDilemaMessage: {fileID: 599688532}
   HomelessDilemaMessageButton1: {fileID: 688125081}
   HomelessDilemaMessageButton2: {fileID: 1937210406}
@@ -2480,11 +2499,11 @@ MonoBehaviour:
   TouchScreen: {fileID: 133163591}
   Joystick: {fileID: 193861815}
   DilemaMessagePanel: {fileID: 1882340490}
-  HomelessCoins: {fileID: 1201246779}
-  HelpPanelButton: {fileID: 601593450}
   HelpPanel: {fileID: 1611133743}
+  HelpPanelButton: {fileID: 601593450}
   UIManager: {fileID: 550452612}
-  sceneController: {fileID: 1963064261}
+  SceneController: {fileID: 1963064261}
+  HomelessCoins: {fileID: 1201246779}
 --- !u!1 &553827813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8056777717720132107, guid: b9b690ee15a576241a99d7d7c32a6ec5, type: 3}
@@ -3661,10 +3680,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &661762962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c6a076042b126a648a6e4c00f79eaf11, type: 3}
@@ -4596,11 +4615,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdecee1d34ed20e41bda067b03441299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCounterText: {fileID: 885473191}
-  animationDuration: 1.5
-  scaleFactor: 1.5
-  coinCollectedAudioClip: {fileID: 8300000, guid: ca46f333d111f344783113babb691f9b, type: 3}
-  coinCollectedAudioSource: {fileID: 946407992}
+  CoinCounterText: {fileID: 885473191}
+  AnimationDuration: 1.5
+  ScaleFactor: 1.5
+  CoinCollectedAudioClip: {fileID: 8300000, guid: ca46f333d111f344783113babb691f9b, type: 3}
+  CoinCollectedAudioSource: {fileID: 946407992}
 --- !u!82 &946407992
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5306,10 +5325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1181047788
 GameObject:
   m_ObjectHideFlags: 0
@@ -5578,10 +5597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1201246779
 GameObject:
   m_ObjectHideFlags: 0
@@ -5929,8 +5948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4454d5f1d916d4b9e0eab26d922964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsManager: {fileID: 2099798142}
-  sceneController: {fileID: 1963064261}
+  CoinsManager: {fileID: 2099798142}
+  SceneController: {fileID: 1963064261}
 --- !u!1 &1291396135
 GameObject:
   m_ObjectHideFlags: 0
@@ -6007,7 +6026,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 73440876b031b62409c0bc5200b62c36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6274,10 +6293,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1329091660
 GameObject:
   m_ObjectHideFlags: 0
@@ -7577,10 +7596,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1452599428
 GameObject:
   m_ObjectHideFlags: 0
@@ -7769,8 +7788,8 @@ MonoBehaviour:
   LeftArrowText: {fileID: 557104496}
   RightArrow: {fileID: 947171566}
   RightArrowText: {fileID: 2093760421}
-  PreviousSceneNameString: 9
-  NextSceneNameString: 11
+  PreviousSceneNameString: 10
+  NextSceneNameString: 12
 --- !u!4 &1515949617
 Transform:
   m_ObjectHideFlags: 0
@@ -8144,10 +8163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1644148851
 GameObject:
   m_ObjectHideFlags: 0
@@ -9042,25 +9061,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3595c9489b1db6d44a74b5b8acb29d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moralDilemmaStates: []
-  moralityValue: 0
-  totalCoins: 0
-  moralityValuesPerSceneList:
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  gameTime:
-    startTime: 0
-    endTime: 0
-    timeTaken: 0
-  isGameOver: 0
+  MoralDilemmaStates: []
+  MoralityValue: 0
+  TotalCoins: 0
+  MoralityValuesPerSceneList:
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  GameTime:
+    StartTime: 0
+    EndTime: 0
+    TimeTaken: 0
+  IsGameOver: 0
 --- !u!4 &1963064262
 Transform:
   m_ObjectHideFlags: 0
@@ -9211,10 +9230,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1001 &2042166909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9377,7 +9396,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 73440876b031b62409c0bc5200b62c36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

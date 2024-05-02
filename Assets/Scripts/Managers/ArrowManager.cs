@@ -1,22 +1,28 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-// This class manages the visibility and functionality of navigation arrows in the UI
+/// <summary>
+/// Manages the visibility and functionality of navigation arrows in the UI.
+/// </summary>
 public class ArrowManager : MonoBehaviour
 {
     // UI elements for left and right arrows
+    [Header("Arrows")]
     public GameObject LeftArrow;
     public TextMeshProUGUI LeftArrowText;
     public GameObject RightArrow;
     public TextMeshProUGUI RightArrowText;
 
+    [Header("Scene Names")]
     // Names of previous and next scenes
     public LanguageFields PreviousSceneNameString;
     public LanguageFields NextSceneNameString;
 
     private LanguageManager LanguageManager;
+
+    private readonly  int TutorialScene = 1;
+    private readonly  int SceneAfterTutorial = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -43,14 +49,14 @@ public class ArrowManager : MonoBehaviour
         SceneController sceneController = FindObjectOfType<SceneController>();
 
         // Get the array of moral dilemma states from SceneController
-        MoralDilemmaData[] moralDilemmaStates = sceneController.moralDilemmaStates;
+        MoralDilemmaData[] moralDilemmaStates = sceneController.MoralDilemmaStates;
 
         // Check if it's the first scene
-        if (currentSceneIndex == 1)
+        if (currentSceneIndex == TutorialScene)
         {
             // Hide left arrow and show right arrow if the next moral dilemma is completed
             LeftArrow.SetActive(false);
-            if (moralDilemmaStates[1].completed)
+            if (moralDilemmaStates[TutorialScene].Completed)
             {
                 RightArrow.SetActive(true);
                 RightArrowText.text = LanguageManager.GetLocalizedText(LanguageFields.arrow_message.ToString()) + LanguageManager.GetLocalizedText(NextSceneNameString.ToString());
@@ -68,10 +74,12 @@ public class ArrowManager : MonoBehaviour
             LeftArrowText.text = LanguageManager.GetLocalizedText(LanguageFields.arrow_message.ToString()) + LanguageManager.GetLocalizedText(PreviousSceneNameString.ToString());
             RightArrow.SetActive(false);
         }
-        else if (currentSceneIndex == 2)
+        // Check if it's the first scene after the tutorial
+        else if (currentSceneIndex == SceneAfterTutorial)
         {
+            // Hide left arrow and check if the scene is completed to show right arrow
             LeftArrow.SetActive(false);
-            if (moralDilemmaStates[currentSceneIndex].completed)
+            if (moralDilemmaStates[currentSceneIndex].Completed)
             {
                 RightArrow.SetActive(true);
                 RightArrowText.text = LanguageManager.GetLocalizedText(LanguageFields.arrow_message.ToString()) + LanguageManager.GetLocalizedText(NextSceneNameString.ToString());
@@ -85,7 +93,7 @@ public class ArrowManager : MonoBehaviour
         else
         {
             // Check if the previous moral dilemma is completed
-            if (moralDilemmaStates[currentSceneIndex - 1].completed)
+            if (moralDilemmaStates[currentSceneIndex - 1].Completed)
             {
                 LeftArrow.SetActive(true);
                 LeftArrowText.text = LanguageManager.GetLocalizedText(LanguageFields.arrow_message.ToString()) + LanguageManager.GetLocalizedText(PreviousSceneNameString.ToString());
@@ -96,7 +104,7 @@ public class ArrowManager : MonoBehaviour
             }
 
             // Check if the current moral dilemma is completed
-            if (moralDilemmaStates[currentSceneIndex].completed)
+            if (moralDilemmaStates[currentSceneIndex].Completed)
             {
                 RightArrow.SetActive(true);
                 RightArrowText.text = LanguageManager.GetLocalizedText(LanguageFields.arrow_message.ToString()) + LanguageManager.GetLocalizedText(NextSceneNameString.ToString());
@@ -111,6 +119,7 @@ public class ArrowManager : MonoBehaviour
     // Method to load the main menu scene
     public void GoToMainMenu()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(Constants.MainMenu);
     }
 

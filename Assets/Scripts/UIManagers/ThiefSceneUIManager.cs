@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEngine;
 
 public class ThiefSceneUIManager : GeneralCanvasUIManager
 {
@@ -35,12 +34,12 @@ public class ThiefSceneUIManager : GeneralCanvasUIManager
     // Update additional UI text element with localized text
     private void UpdateAdditionalText()
     {
-        ThiefDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.thief_dilema_message.ToString());
-        ThiefDilemaMessage2.text = languageManager.GetLocalizedText(LanguageFields.thief_dilema_message2.ToString());
-        ThiefDilemaMessageButton1.text = languageManager.GetLocalizedText(LanguageFields.thief_dilema_message_button1.ToString());
-        ThiefDilemaMessageButton2.text = languageManager.GetLocalizedText(LanguageFields.thief_dilema_message_button2.ToString());
-        ThiefDilemaMessageButton3.text = languageManager.GetLocalizedText(LanguageFields.thief_dilema_message_button3.ToString());
-        ThiefDilemaMessageButton4.text = languageManager.GetLocalizedText(LanguageFields.thief_dilema_message_button4.ToString());
+        ThiefDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.thief_dilemma_message.ToString());
+        ThiefDilemaMessage2.text = languageManager.GetLocalizedText(LanguageFields.thief_dilemma_message2.ToString());
+        ThiefDilemaMessageButton1.text = languageManager.GetLocalizedText(LanguageFields.thief_dilemma_message_button1.ToString());
+        ThiefDilemaMessageButton2.text = languageManager.GetLocalizedText(LanguageFields.thief_dilemma_message_button2.ToString());
+        ThiefDilemaMessageButton3.text = languageManager.GetLocalizedText(LanguageFields.thief_dilemma_message_button3.ToString());
+        ThiefDilemaMessageButton4.text = languageManager.GetLocalizedText(LanguageFields.thief_dilemma_message_button4.ToString());
         ThiefDilemaMessageNextButton.text = languageManager.GetLocalizedText(LanguageFields.next_button.ToString());
         InfoPanelMessage.text = languageManager.GetLocalizedText(LanguageFields.info_panel_message1.ToString()) + Constants.CoinObjective +languageManager.GetLocalizedText(LanguageFields.info_panel_message2.ToString());
         InfoPanelMessageCloseButton.text = languageManager.GetLocalizedText(LanguageFields.close_button.ToString());

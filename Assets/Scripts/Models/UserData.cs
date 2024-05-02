@@ -1,14 +1,17 @@
+/// <summary>
+/// Represents user data including game time, description, and trait data.
+/// </summary>
 [System.Serializable]
 public class UserData
 {
-    public string gameTime;
-    public string description;
-    public TraitData traitData;
+    public string GameTime;
+    public string Description;
+    public TraitData TraitData;
 
-    public UserData(string gameTime, string description, TraitData traitData)
+    public UserData(string GameTime, string Description, TraitData TraitData)
     {
-       this.gameTime = gameTime;
-       this.description = description;
-       this.traitData = traitData; 
+        this.GameTime = GameTime;
+        this.Description = Description;
+        this.TraitData = TraitData;
     }
 }

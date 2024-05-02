@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEngine;
 
+/// <summary>
+/// Manages the UI elements in the tutorial scene
+/// </summary>
 public class EntrySceneUIManager : GeneralCanvasUIManager
 {
-    public TextMeshProUGUI tutorialMessage1;
-    public TextMeshProUGUI tutorialMessage2;
-    public TextMeshProUGUI tutorialMessage3;
-    public TextMeshProUGUI tutorialMessage4;
-    public TextMeshProUGUI tutorialMessage5;
-    public TextMeshProUGUI tutorialMessageNext;
+    public TextMeshProUGUI TutorialMessage1;
+    public TextMeshProUGUI TutorialMessage2;
+    public TextMeshProUGUI TutorialMessage3;
+    public TextMeshProUGUI TutorialMessage4;
+    public TextMeshProUGUI TutorialMessage5;
+    public TextMeshProUGUI TutorialMessageNext;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -34,12 +34,12 @@ public class EntrySceneUIManager : GeneralCanvasUIManager
     // Update additional UI text element with localized text
     private void UpdateAdditionalText()
     {
-        tutorialMessage1.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message1.ToString()) + Constants.CoinObjective + languageManager.GetLocalizedText(LanguageFields.tutorial_message1_1.ToString());
-        tutorialMessage2.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message2.ToString());
-        tutorialMessage3.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message3.ToString());
-        tutorialMessage4.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message4.ToString());
-        tutorialMessage5.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message5.ToString());
-        tutorialMessageNext.text = languageManager.GetLocalizedText(LanguageFields.next_button.ToString());
+        TutorialMessage1.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message1.ToString()) + Constants.CoinObjective + languageManager.GetLocalizedText(LanguageFields.tutorial_message1_1.ToString());
+        TutorialMessage2.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message2.ToString());
+        TutorialMessage3.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message3.ToString());
+        TutorialMessage4.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message4.ToString());
+        TutorialMessage5.text = languageManager.GetLocalizedText(LanguageFields.tutorial_message5.ToString());
+        TutorialMessageNext.text = languageManager.GetLocalizedText(LanguageFields.next_button.ToString());
     }
 }
 

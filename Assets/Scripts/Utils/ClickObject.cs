@@ -5,10 +5,10 @@ public class ClickObject : MonoBehaviour
 {
 
     // Reference to the CoinManager script
-    public CoinManager coinsManager;
+    public CoinManager CoinsManager;
 
     // Reference to the SceneController script
-    public SceneController sceneController;
+    public SceneController SceneController;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -33,8 +33,8 @@ public class ClickObject : MonoBehaviour
                     if (hitObject.tag == Constants.CoinTag)
                     {
                         // If it's a coin, collect it and update scene
-                        coinsManager.CollectCoin(hitObject);
-                        sceneController.CoinCollected(1);
+                        CoinsManager.CollectCoin(hitObject);
+                        SceneController.CoinCollected(1);
                     }
                 }
             }

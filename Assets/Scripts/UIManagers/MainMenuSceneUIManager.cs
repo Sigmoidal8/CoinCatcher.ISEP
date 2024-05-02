@@ -1,41 +1,40 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MainMenuSceneUIManager : MonoBehaviour
 {
-    public TextMeshProUGUI welcomeText;
-    public TextMeshProUGUI languageText;
-    public TextMeshProUGUI playButton;
-    public TextMeshProUGUI settingsButton;
-    public TextMeshProUGUI quitButton;
-    public TextMeshProUGUI closeButton;
-    public TextMeshProUGUI startButton;
-    public TextMeshProUGUI alertMessage;
-    public TMP_Dropdown languagePicker;
-
-    private LanguageManager languageManager;
+    public TextMeshProUGUI WelcomeText;
+    public TextMeshProUGUI LanguageText;
+    public TextMeshProUGUI PlayButton;
+    public TextMeshProUGUI SettingsButton;
+    public TextMeshProUGUI QuitButton;
+    public TextMeshProUGUI CloseButton;
+    public TextMeshProUGUI StartButton;
+    public TextMeshProUGUI CloseUsernameButton;
+    public TextMeshProUGUI UsernameInput;
+    public TextMeshProUGUI AlertMessage;
+    public TMP_Dropdown LanguagePicker;
+    private LanguageManager LanguageManager;
 
     // Start is called before the first frame update
     void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         // Find the LanguageManager in the scene or create one if not found
-        languageManager = FindObjectOfType<LanguageManager>();
-        if (languageManager == null)
+        LanguageManager = FindObjectOfType<LanguageManager>();
+        if (LanguageManager == null)
         {
             GameObject languageManagerObject = new GameObject(Constants.LanguageManagerComponent);
-            languageManager = languageManagerObject.AddComponent<LanguageManager>();
+            LanguageManager = languageManagerObject.AddComponent<LanguageManager>();
         }
 
         string[] enumNames = Enum.GetNames(typeof(Language));
         List<string> names = new List<string>(enumNames);
-        languagePicker.AddOptions(names);
+        LanguagePicker.AddOptions(names);
 
-        languagePicker.onValueChanged.AddListener(OnLanguagePickerValueChanged);
+        LanguagePicker.onValueChanged.AddListener(OnLanguagePickerValueChanged);
 
         // Update UI texts based on the current language
         UpdateUITexts();
@@ -54,21 +53,23 @@ public class MainMenuSceneUIManager : MonoBehaviour
     // Update UI text elements with localized text
     private void UpdateUITexts()
     {
-        welcomeText.text = languageManager.GetLocalizedText(LanguageFields.welcome_message.ToString());
-        languageText.text = languageManager.GetLocalizedText(LanguageFields.language.ToString());
-        playButton.text = languageManager.GetLocalizedText(LanguageFields.play_button.ToString());
-        settingsButton.text = languageManager.GetLocalizedText(LanguageFields.settings_button.ToString());
-        quitButton.text = languageManager.GetLocalizedText(LanguageFields.quit_button.ToString());
-        closeButton.text = languageManager.GetLocalizedText(LanguageFields.close_button.ToString());
-        startButton.text = languageManager.GetLocalizedText(LanguageFields.play_button.ToString());
-        alertMessage.text = languageManager.GetLocalizedText(LanguageFields.alert.ToString());
+        WelcomeText.text = LanguageManager.GetLocalizedText(LanguageFields.welcome_message.ToString());
+        LanguageText.text = LanguageManager.GetLocalizedText(LanguageFields.language.ToString());
+        PlayButton.text = LanguageManager.GetLocalizedText(LanguageFields.play_button.ToString());
+        SettingsButton.text = LanguageManager.GetLocalizedText(LanguageFields.settings_button.ToString());
+        QuitButton.text = LanguageManager.GetLocalizedText(LanguageFields.quit_button.ToString());
+        CloseButton.text = LanguageManager.GetLocalizedText(LanguageFields.close_button.ToString());
+        StartButton.text = LanguageManager.GetLocalizedText(LanguageFields.play_button.ToString());
+        AlertMessage.text = LanguageManager.GetLocalizedText(LanguageFields.alert.ToString());
+        CloseUsernameButton.text = LanguageManager.GetLocalizedText(LanguageFields.close_button.ToString());
+        UsernameInput.text = LanguageManager.GetLocalizedText(LanguageFields.username_input.ToString());
     }
 
     // Called when the language is changed
     public void OnLanguageChanged(Language newLanguage)
     {
         // Update the LanguageManager with the new language
-        languageManager.SetLanguage(newLanguage);
+        LanguageManager.SetLanguage(newLanguage);
 
         // Update UI texts with the new language
         UpdateUITexts();

@@ -1,31 +1,34 @@
+/// <summary>
+/// Represents data for a moral dilemma.
+/// </summary>
 [System.Serializable]
 public class MoralDilemmaData
 {
-    // Indicates whether the dilemma is completed
-    public bool completed;
+    // Indicates whether the dilemma is Completed
+    public bool Completed;
 
     // Index of the chosen answer
-    public int moralDilemaChosenOption;
+    public int MoralDilemmaChosenOption;
 
-    public string moralDilemaChosenOptionDescription;
+    public string MoralDilemmaChosenOptionDescription;
 
-    public double decisionValue;
+    public double DecisionValue;
 
-    public string sceneName;
+    public string SceneName;
 
-    public int coinsCollected;
+    public int CoinsCollected;
 
-    public TimeMeasurement timestamps;
+    public TimeMeasurement Timestamps;
 
     // Constructor for MoralDilemmaData class
-    public MoralDilemmaData(bool completed, int moralDilemaChosenOption, string sceneName, int coinsCollected, string moralDilemaChosenOptionDescription, double decisionValue, TimeMeasurement timestamps)
+    public MoralDilemmaData(bool Completed, int MoralDilemmaChosenOption, string SceneName, int CoinsCollected, string MoralDilemmaChosenOptionDescription, double DecisionValue, TimeMeasurement Timestamps)
     {
-        this.completed = completed;
-        this.moralDilemaChosenOption = moralDilemaChosenOption;
-        this.sceneName = sceneName;
-        this.coinsCollected = coinsCollected;
-        this.moralDilemaChosenOptionDescription = moralDilemaChosenOptionDescription;
-        this.decisionValue = decisionValue;
-        this.timestamps = timestamps;
+        this.Completed = Completed;
+        this.MoralDilemmaChosenOption = MoralDilemmaChosenOption;
+        this.SceneName = SceneName;
+        this.CoinsCollected = CoinsCollected;
+        this.MoralDilemmaChosenOptionDescription = MoralDilemmaChosenOptionDescription;
+        this.DecisionValue = DecisionValue;
+        this.Timestamps = Timestamps;
     }
 }

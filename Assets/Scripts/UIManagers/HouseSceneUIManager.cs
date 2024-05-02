@@ -15,7 +15,6 @@ public class HouseSceneUIManager : GeneralCanvasUIManager
 
 
     [Header("Others")]
-
     public TextMeshProUGUI WatchDilemaClosingMessageButton;
 
     // Start is called before the first frame update
@@ -43,14 +42,14 @@ public class HouseSceneUIManager : GeneralCanvasUIManager
         IntroductionMessage.text = languageManager.GetLocalizedText(LanguageFields.introduction_message.ToString());
         IntroductionMessageButton1.text = languageManager.GetLocalizedText(LanguageFields.introduction_message_button1.ToString());
         IntroductionMessageButton2.text = languageManager.GetLocalizedText(LanguageFields.introduction_message_button2.ToString());
-        WatchDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.watch_dilema_message.ToString());
-        WatchDilemaMessageButton1.text = languageManager.GetLocalizedText(LanguageFields.watch_dilema_message_button1.ToString());
-        WatchDilemaMessageButton2.text = languageManager.GetLocalizedText(LanguageFields.watch_dilema_message_button2.ToString());
+        WatchDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.watch_dilemma_message.ToString());
+        WatchDilemaMessageButton1.text = languageManager.GetLocalizedText(LanguageFields.watch_dilemma_message_button1.ToString());
+        WatchDilemaMessageButton2.text = languageManager.GetLocalizedText(LanguageFields.watch_dilemma_message_button2.ToString());
         WatchDilemaClosingMessageButton.text = languageManager.GetLocalizedText(LanguageFields.close_button.ToString());
     }
 
     public void UpdateClosingMessage()
     {
-        WatchDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.watch_dilema_closing_message.ToString());
+        WatchDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.watch_dilemma_closing_message.ToString());
     }
 }

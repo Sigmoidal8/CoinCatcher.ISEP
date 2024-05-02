@@ -814,7 +814,7 @@ MonoBehaviour:
   RightArrow: {fileID: 671393614}
   RightArrowText: {fileID: 980665695}
   PreviousSceneNameString: 8
-  NextSceneNameString: 9
+  NextSceneNameString: 10
 --- !u!4 &153887023
 Transform:
   m_ObjectHideFlags: 0
@@ -858,8 +858,8 @@ Transform:
   m_GameObject: {fileID: 154228640}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 3.39, y: -0, z: -8.2}
-  m_LocalScale: {x: 1, y: 1, z: 2}
+  m_LocalPosition: {x: 3.39, y: 2.94, z: -9.99}
+  m_LocalScale: {x: 0.5, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1259204835}
@@ -906,7 +906,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 73440876b031b62409c0bc5200b62c36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1856,10 +1856,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &307171190
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,8 +3065,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4454d5f1d916d4b9e0eab26d922964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsManager: {fileID: 213490645}
-  sceneController: {fileID: 1523827917}
+  CoinsManager: {fileID: 213490645}
+  SceneController: {fileID: 1523827917}
 --- !u!1001 &504209562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3575,8 +3575,8 @@ Transform:
   m_GameObject: {fileID: 641817524}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
-  m_LocalPosition: {x: -4.93, y: -0, z: -3.93}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.93, y: -0, z: -6.52}
+  m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1259204835}
@@ -3623,7 +3623,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 73440876b031b62409c0bc5200b62c36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3801,11 +3801,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdecee1d34ed20e41bda067b03441299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCounterText: {fileID: 1789188590}
-  animationDuration: 1.5
-  scaleFactor: 1.5
-  coinCollectedAudioClip: {fileID: 8300000, guid: ca46f333d111f344783113babb691f9b, type: 3}
-  coinCollectedAudioSource: {fileID: 662821554}
+  CoinCounterText: {fileID: 1789188590}
+  AnimationDuration: 1.5
+  ScaleFactor: 1.5
+  CoinCollectedAudioClip: {fileID: 8300000, guid: ca46f333d111f344783113babb691f9b, type: 3}
+  CoinCollectedAudioSource: {fileID: 662821554}
 --- !u!82 &662821554
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4289,10 +4289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!4 &720717297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 435304, guid: 526a7966ccaa21a478875fa72207388c, type: 3}
@@ -5609,10 +5609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &829089331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3129200342344496425, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
@@ -5651,10 +5651,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &835352344
 GameObject:
   m_ObjectHideFlags: 0
@@ -7934,8 +7934,8 @@ Transform:
   m_GameObject: {fileID: 1216967431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 8.01, y: -0, z: -3.93}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.01, y: -0, z: -6.26}
+  m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1259204835}
@@ -7982,7 +7982,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 73440876b031b62409c0bc5200b62c36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8219,6 +8219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1259204835}
+  - component: {fileID: 1259204836}
   m_Layer: 0
   m_Name: Blockers
   m_TagString: Untagged
@@ -8244,6 +8245,24 @@ Transform:
   - {fileID: 154228641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1259204836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259204834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4546e3eb685eba439d97069b76f3d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1882233485}
+  BlockerColliders:
+  - {fileID: 1216967433}
+  - {fileID: 154228642}
+  - {fileID: 641817526}
+  VisibleDistance: 1.5
 --- !u!1 &1292667750
 GameObject:
   m_ObjectHideFlags: 0
@@ -8355,17 +8374,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc512f64cba94734790d71af02d44439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quitButton: {fileID: 540408268}
+  QuitButton: {fileID: 540408268}
   HelpDilemmaMessage: {fileID: 0}
   HelpDilemmaMessageClose: {fileID: 0}
-  audioSource: {fileID: 1303022175}
-  audioClip: {fileID: 8300000, guid: ebbb8bce2ae60d3418c54c75ddca53b0, type: 3}
-  tutorialMessage1: {fileID: 285492794}
-  tutorialMessage2: {fileID: 1869455506}
-  tutorialMessage3: {fileID: 307171192}
-  tutorialMessage4: {fileID: 53309032}
-  tutorialMessage5: {fileID: 1932910461}
-  tutorialMessageNext: {fileID: 1404706975}
+  AudioSource: {fileID: 1303022175}
+  AudioClip: {fileID: 8300000, guid: ebbb8bce2ae60d3418c54c75ddca53b0, type: 3}
+  TutorialMessage1: {fileID: 285492794}
+  TutorialMessage2: {fileID: 1869455506}
+  TutorialMessage3: {fileID: 307171192}
+  TutorialMessage4: {fileID: 53309032}
+  TutorialMessage5: {fileID: 1932910461}
+  TutorialMessageNext: {fileID: 1404706975}
 --- !u!4 &1303022174
 Transform:
   m_ObjectHideFlags: 0
@@ -9866,57 +9885,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3595c9489b1db6d44a74b5b8acb29d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moralDilemmaStates: []
-  moralityValue: 0
-  totalCoins: 0
-  moralityValuesPerSceneList:
-  - moralityValues:
+  MoralDilemmaStates: []
+  MoralityValue: 0
+  TotalCoins: 0
+  MoralityValuesPerSceneList:
+  - MoralityValues:
     - 0
-    moralityDescriptions:
+    MoralityDescriptions:
     - Tutorial
-  - moralityValues:
+  - MoralityValues:
     - 5
     - 2
     - 3
-    moralityDescriptions:
+    MoralityDescriptions:
     - Give Watch Back
     - Sell Watch
     - Ignore
-  - moralityValues:
+  - MoralityValues:
     - 5
     - 1
     - 3
-    moralityDescriptions:
+    MoralityDescriptions:
     - Give coins to Homeless
     - Take coins from Homeless
     - Ignore
-  - moralityValues:
+  - MoralityValues:
     - 4
     - 3
     - 2
-    moralityDescriptions:
+    MoralityDescriptions:
     - Follow thief
     - Don't follow - fear
     - Don't follow - no interest
-  - moralityValues:
+  - MoralityValues:
     - 4
     - 1
     - 5
     - 2
-    moralityDescriptions:
+    MoralityDescriptions:
     - Take money and give back to elder
     - Take money and keep it
     - Take money and give back to elder and give 3 coins to thief
     - Let thief keep money
-  - moralityValues:
+  - MoralityValues:
     - 0
-    moralityDescriptions:
+    MoralityDescriptions:
     - Ending
-  gameTime:
-    startTime: 0
-    endTime: 0
-    timeTaken: 0
-  isGameOver: 0
+  GameTime:
+    StartTime: 0
+    EndTime: 0
+    TimeTaken: 0
+  IsGameOver: 0
 --- !u!4 &1523827918
 Transform:
   m_ObjectHideFlags: 0
@@ -10538,8 +10557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be33f73973077f41a47fee91f7a2eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialMessagePanel: {fileID: 1292667750}
-  messagePopUps:
+  TutorialMessagePanel: {fileID: 1292667750}
+  MessagePopUps:
   - {fileID: 285492793}
   - {fileID: 1869455504}
   - {fileID: 307171190}
@@ -11501,10 +11520,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1869455504
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,19 +1,23 @@
-// Represents a coin object
+
 using UnityEngine;
 
+/// <summary>
+/// Represents a coin object
+/// </summary>
 [System.Serializable]
 public class Coin
 {
     // Name of the coin object
-    public string coinObjectId;
+    public string CoinObjectId;
 
-    // Indicates whether the coin is collected
-    public bool collected;
+    // Indicates whether the coin is Collected
+    public bool Collected;
 
-    public Coin(GameObject pos, bool collected)
+    public Coin(GameObject pos, bool Collected)
     {
-        coinObjectId = pos.name; // Store the name of the GameObject
-        this.collected = collected;
+        // Store the name of the GameObject as the coin object ID
+        CoinObjectId = pos.name;
+        this.Collected = Collected;
     }
 
 }

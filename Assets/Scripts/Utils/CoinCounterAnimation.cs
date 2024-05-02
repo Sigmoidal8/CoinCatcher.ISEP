@@ -5,57 +5,57 @@ using UnityEngine;
 public class CoinCounterAnimation : MonoBehaviour
 {
     // Reference to the GameObject containing the coin counter text
-    public GameObject coinCounterText;
+    public GameObject CoinCounterText;
 
     // Duration of the animation in seconds
-    public float animationDuration = 1.5f;
+    public float AnimationDuration = 1.5f;
 
     // Scale factor for the animation
-    public float scaleFactor = 1.5f;
+    public float ScaleFactor = 1.5f;
 
-    public AudioClip coinCollectedAudioClip;
+    public AudioClip CoinCollectedAudioClip;
 
-    public AudioSource coinCollectedAudioSource;
+    public AudioSource CoinCollectedAudioSource;
 
     // Timer for the animation
-    private float timer;
+    private float Timer;
 
     // Reference to the TextMeshProUGUI component of the coin counter text
-    private TextMeshProUGUI textMeshProUGUI;
+    private TextMeshProUGUI TextMeshProUGUI;
 
     // Initial color of the text
-    private Color initialColor;
+    private Color InitialColor;
 
     // Transparent color with zero alpha
-    private Color transparentColor = new Color(1f, 1f, 1f, 0f);
+    private Color TransparentColor = new Color(1f, 1f, 1f, 0f);
 
     // Start is called before the first frame update
     private void Start()
     {
-        // Get the material of the coinCounterText GameObject
-        TextMeshProUGUI textMeshProUGUI_obj = coinCounterText.GetComponent<TextMeshProUGUI>();
-        textMeshProUGUI = textMeshProUGUI_obj;
-        initialColor = textMeshProUGUI.color;
+        // Get the material of the CoinCounterText GameObject
+        TextMeshProUGUI textMeshProUGUI_obj = CoinCounterText.GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI = textMeshProUGUI_obj;
+        InitialColor = TextMeshProUGUI.color;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        // If the timer is greater than zero, continue the animation
-        if (timer > 0)
+        // If the Timer is greater than zero, continue the animation
+        if (Timer > 0)
         {
-            timer -= Time.deltaTime;
-            float progress = 1f - (timer / animationDuration);
-            float scale = Mathf.Lerp(scaleFactor, 1f, progress);
-            textMeshProUGUI.transform.localScale = new Vector3(scale, scale, 1f);
+            Timer -= Time.deltaTime;
+            float progress = 1f - (Timer / AnimationDuration);
+            float scale = Mathf.Lerp(ScaleFactor, 1f, progress);
+            TextMeshProUGUI.transform.localScale = new Vector3(scale, scale, 1f);
 
             // Interpolate the alpha value
-            textMeshProUGUI.color = Color.Lerp(initialColor, transparentColor, progress);
+            TextMeshProUGUI.color = Color.Lerp(InitialColor, TransparentColor, progress);
         }
         else
         {
             // If the animation is finished, deactivate the coin counter text GameObject
-            coinCounterText.SetActive(false);
+            CoinCounterText.SetActive(false);
         }
     }
 
@@ -64,17 +64,17 @@ public class CoinCounterAnimation : MonoBehaviour
     {
         if (isToAdd)
         {
-            textMeshProUGUI.text = "+" + coinsAdded.ToString();
+            TextMeshProUGUI.text = "+" + coinsAdded.ToString();
         }else{
-            textMeshProUGUI.text = "-" + coinsAdded.ToString();
+            TextMeshProUGUI.text = "-" + coinsAdded.ToString();
         }
-        coinCollectedAudioSource.PlayOneShot(coinCollectedAudioClip);
+        CoinCollectedAudioSource.PlayOneShot(CoinCollectedAudioClip);
         // Activate the coin counter text GameObject
-        coinCounterText.SetActive(true);
-        // Reset the timer and scale of the animation
-        timer = animationDuration;
-        textMeshProUGUI.transform.localScale = new Vector3(scaleFactor, scaleFactor, 1f);
+        CoinCounterText.SetActive(true);
+        // Reset the Timer and scale of the animation
+        Timer = AnimationDuration;
+        TextMeshProUGUI.transform.localScale = new Vector3(ScaleFactor, ScaleFactor, 1f);
         // Reset the color of the text
-        textMeshProUGUI.color = initialColor;
+        TextMeshProUGUI.color = InitialColor;
     }
 }

@@ -14,11 +14,11 @@ public class ButtonController : MonoBehaviour
     // Reference to the settings panel in the UI
     public GameObject SettingsPanel;
 
-    public GameObject usernamePanel;
+    public GameObject UsernamePanel;
 
-    public GameObject alert;
+    public GameObject Alert;
 
-    public TMP_InputField inputField;
+    public TMP_InputField InputField;
 
     // Method to toggle the visibility of the settings panel
     public void ToggleSettingsPanel()
@@ -38,7 +38,12 @@ public class ButtonController : MonoBehaviour
 
     public void ShowUsernamePanel()
     {
-        usernamePanel.SetActive(true);
+        UsernamePanel.SetActive(true);
+    }
+
+        public void HideUsernamePanel()
+    {
+        UsernamePanel.SetActive(false);
     }
 
     // Method to handle the start game button click event
@@ -47,16 +52,18 @@ public class ButtonController : MonoBehaviour
         if (ValidateUsername())
         {
             // Extract name and age
-            string playerName = inputField.text;
+            string playerName = InputField.text;
 
-            // Create new JSON file name
-            string newJsonFileName = $"{playerName}.json";
-            string newJsonFilePath = Path.Combine(Application.persistentDataPath, newJsonFileName);
-
-            PlayerData playerData = new PlayerData(playerName);
-
-            // Create and save new JSON file
-            File.WriteAllText(newJsonFilePath, JsonUtility.ToJson(playerData));
+            string existingJsonFilePathPlayer = Path.Combine(Application.persistentDataPath, $"userfiles.json");
+            if(!File.Exists(existingJsonFilePathPlayer)){
+                File.WriteAllText(existingJsonFilePathPlayer, JsonUtility.ToJson("{userData:[]}"));
+            }
+            /*
+             string newJsonFilePath = Path.Combine(Application.persistentDataPath, newJsonFileName
+             PlayerData playerData = new PlayerData(playerName
+             // Create and save new JSON file
+             File.WriteAllText(newJsonFilePath, JsonUtility.ToJson(playerData));
+             */
 
             // Store the path to the new JSON file for later use
             PlayerPrefs.SetString(Constants.PlayerFabsPlayerName, playerName);
@@ -67,13 +74,13 @@ public class ButtonController : MonoBehaviour
         }
         else
         {
-            alert.SetActive(true);
+            Alert.SetActive(true);
         }
     }
 
     private bool ValidateUsername()
     {
-        string playerName = inputField.text;
+        string playerName = InputField.text;
         if (string.IsNullOrEmpty(playerName))
         {
             return false;

@@ -1,9 +1,15 @@
+/// <summary>
+/// Represents data related to a player.
+/// </summary>
 [System.Serializable]
 public class PlayerData
 {
-    public string username;
+    //The username of the player.
+    public string Username;
 
-    public PlayerData(string username){
-        this.username = username;
+    // Constructor for the PlayerData class.
+    public PlayerData(string Username)
+    {
+        this.Username = Username;
     }
 }

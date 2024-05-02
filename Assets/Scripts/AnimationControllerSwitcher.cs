@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
+// This class is responsible for switching the Animator Controller of a game object.
 public class AnimatorControllerSwitcher : MonoBehaviour
 {
-    public Animator animator;
-    public RuntimeAnimatorController newController;
+    public Animator Animator;
+    public RuntimeAnimatorController NewController;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class AnimatorControllerSwitcher : MonoBehaviour
     // Method to switch the Animator Controller
     public void SwitchController(RuntimeAnimatorController animatorController)
     {
-        animator.runtimeAnimatorController = animatorController;
+        Animator.runtimeAnimatorController = animatorController;
     }
 
     // Callback method called when the Timeline ends
@@ -32,7 +33,7 @@ public class AnimatorControllerSwitcher : MonoBehaviour
         if (director == GetComponent<PlayableDirector>())
         {
             // Call the method to switch the Animator Controller
-            SwitchController(newController);
+            SwitchController(NewController);
         }
     }
 }

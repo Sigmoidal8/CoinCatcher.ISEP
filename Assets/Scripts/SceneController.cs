@@ -9,21 +9,21 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     // Array to store the state of moral dilemmas for each scene
-    public MoralDilemmaData[] moralDilemmaStates;
+    public MoralDilemmaData[] MoralDilemmaStates;
 
     // Current morality value
-    public double moralityValue;
+    public double MoralityValue;
 
     // Total coins collected
-    public int totalCoins;
+    public int TotalCoins;
 
     // List of MoralityValuesPerScene objects
     [SerializeField]
-    public List<MoralityValuesPerScene> moralityValuesPerSceneList;
+    public List<MoralityValuesPerScene> MoralityValuesPerSceneList;
 
-    public TimeMeasurement gameTime;
+    public TimeMeasurement GameTime;
 
-    public bool isGameOver;
+    public bool IsGameOver;
 
     // Reference to the text displaying the amount of coins
     private TextMeshProUGUI CoinAmount;
@@ -40,26 +40,27 @@ public class SceneController : MonoBehaviour
     void InitializeGameData()
     {
         // Initialize moral dilemma states for each scene
-        moralDilemmaStates = new MoralDilemmaData[SceneManager.sceneCountInBuildSettings];
-        for (int i = 0; i < moralDilemmaStates.Length; i++)
+        MoralDilemmaStates = new MoralDilemmaData[SceneManager.sceneCountInBuildSettings];
+        for (int i = 0; i < MoralDilemmaStates.Length; i++)
         {
             string path = SceneUtility.GetScenePathByBuildIndex(i);
             string sceneName = path.Substring(0, path.Length - 6).Substring(path.LastIndexOf('/') + 1);
-            moralDilemmaStates[i] = new MoralDilemmaData(false, -1, sceneName, 0, "", 0, new TimeMeasurement()); // Not completed, no answer chosen
+            MoralDilemmaStates[i] = new MoralDilemmaData(false, -1, sceneName, 0, "", 0, new TimeMeasurement()); // Not completed, no answer chosen
         }
         // Find the text displaying the amount of coins
         GameObject CoinAmountObject = GameObject.FindGameObjectsWithTag(Constants.CoinAmountTag).FirstOrDefault();
         if (CoinAmountObject)
         {
             CoinAmount = CoinAmountObject.GetComponent<TextMeshProUGUI>();
-            if(CoinAmount.text == "0"){
+            if (CoinAmount.text == "0")
+            {
                 CoinAmount.text = GetStringForCoinAmount(0);
             }
         }
-        if (gameTime == null)
+        if (GameTime == null)
         {
-            gameTime = new TimeMeasurement();
-            gameTime.StartTimer();
+            GameTime = new TimeMeasurement();
+            GameTime.StartTimer();
         }
         LoadGameData();
     }
@@ -83,7 +84,7 @@ public class SceneController : MonoBehaviour
             JsonUtility.FromJsonOverwrite(json, this);
             if (CoinAmount)
             {
-                CoinAmount.text = GetStringForCoinAmount(totalCoins);
+                CoinAmount.text = GetStringForCoinAmount(TotalCoins);
             }
         }
     }
@@ -94,12 +95,12 @@ public class SceneController : MonoBehaviour
         // Get the current scene index
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         // Update the chosen answer index in moral dilemma data for the current scene
-        moralDilemmaStates[currentSceneIndex].moralDilemaChosenOption = chosenValue;
-        moralDilemmaStates[currentSceneIndex].completed = true;
-        moralDilemmaStates[currentSceneIndex].decisionValue = moralityValuesPerSceneList[currentSceneIndex - 1].moralityValues[chosenValue - 1];
-        moralDilemmaStates[currentSceneIndex].moralDilemaChosenOptionDescription = moralityValuesPerSceneList[currentSceneIndex - 1].moralityDescriptions[chosenValue - 1];
+        MoralDilemmaStates[currentSceneIndex].MoralDilemmaChosenOption = chosenValue;
+        MoralDilemmaStates[currentSceneIndex].Completed = true;
+        MoralDilemmaStates[currentSceneIndex].DecisionValue = MoralityValuesPerSceneList[currentSceneIndex - 1].MoralityValues[chosenValue - 1];
+        MoralDilemmaStates[currentSceneIndex].MoralDilemmaChosenOptionDescription = MoralityValuesPerSceneList[currentSceneIndex - 1].MoralityDescriptions[chosenValue - 1];
         // Update morality value based on chosen dilemma option
-        moralityValue += moralityValuesPerSceneList[currentSceneIndex - 1].moralityValues[chosenValue - 1]; // Assuming moralityValues array holds values for each option
+        MoralityValue += MoralityValuesPerSceneList[currentSceneIndex - 1].MoralityValues[chosenValue - 1]; // Assuming moralityValues array holds values for each option
         // Save game data
         SaveGameData();
     }
@@ -108,17 +109,17 @@ public class SceneController : MonoBehaviour
     public void CoinCollected(int coinAmountToAdd)
     {
         // Increment total coins collected
-        totalCoins += coinAmountToAdd;
+        TotalCoins += coinAmountToAdd;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        moralDilemmaStates[currentSceneIndex].coinsCollected = moralDilemmaStates[currentSceneIndex].coinsCollected + 1;
+        MoralDilemmaStates[currentSceneIndex].CoinsCollected = MoralDilemmaStates[currentSceneIndex].CoinsCollected + 1;
         // Update the displayed coin amount
-        CoinAmount.text = GetStringForCoinAmount(totalCoins);
+        CoinAmount.text = GetStringForCoinAmount(TotalCoins);
         // Trigger coin counter animation
         CoinCounterAnimation coinCounterAnimation = GameObject.Find(Constants.CoinAnimationComponent).GetComponent<CoinCounterAnimation>();
         coinCounterAnimation.PlayAnimation(coinAmountToAdd, true);
         // Save game data
         SaveGameData();
-        if (totalCoins >= Constants.CoinObjective)
+        if (TotalCoins >= Constants.CoinObjective)
         {
             SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
         }
@@ -128,61 +129,68 @@ public class SceneController : MonoBehaviour
     public void CoinGiven(int coinAmountToSubtract)
     {
         // Increment total coins collected
-        totalCoins -= coinAmountToSubtract;
+        TotalCoins -= coinAmountToSubtract;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        moralDilemmaStates[currentSceneIndex].coinsCollected = moralDilemmaStates[currentSceneIndex].coinsCollected + 1;
+        MoralDilemmaStates[currentSceneIndex].CoinsCollected = MoralDilemmaStates[currentSceneIndex].CoinsCollected + 1;
         // Update the displayed coin amount
-        CoinAmount.text = GetStringForCoinAmount(totalCoins);
+        CoinAmount.text = GetStringForCoinAmount(TotalCoins);
         // Trigger coin counter animation
         CoinCounterAnimation coinCounterAnimation = GameObject.Find(Constants.CoinAnimationComponent).GetComponent<CoinCounterAnimation>();
         coinCounterAnimation.PlayAnimation(coinAmountToSubtract, false);
         // Save game data
         SaveGameData();
-        if (totalCoins >= Constants.CoinObjective)
+        if (TotalCoins >= Constants.CoinObjective)
         {
             SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
         }
     }
 
+    // Check if the moral dilemma in the current scene is completed
     public bool IsSceneDilemaCompleted()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        return moralDilemmaStates[currentSceneIndex].completed;
+        return MoralDilemmaStates[currentSceneIndex].Completed;
     }
 
+    // Check if the moral dilemma in the current scene is resolved with a specific option
     public bool IsSceneResolvedWithValue(int optionSelected)
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int chosenOption = moralDilemmaStates[currentSceneIndex].moralDilemaChosenOption;
+        int chosenOption = MoralDilemmaStates[currentSceneIndex].MoralDilemmaChosenOption;
         return optionSelected == chosenOption;
     }
 
+    // Check if the moral dilemma in the next scene is completed
     public bool IsNextSceneDilemaCompleted()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        return moralDilemmaStates[currentSceneIndex + 1].completed;
+        return MoralDilemmaStates[currentSceneIndex + 1].Completed;
     }
 
+    // Get the resolution value of the moral dilemma in the next scene
     public int NextSceneResolvedWithValue()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int chosenOption = moralDilemmaStates[currentSceneIndex + 1].moralDilemaChosenOption;
+        int chosenOption = MoralDilemmaStates[currentSceneIndex + 1].MoralDilemmaChosenOption;
         return chosenOption;
     }
 
+    // Get the resolution value of the moral dilemma in the previous scene
     public int PreviousSceneResolvedWithValue()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int chosenOption = moralDilemmaStates[currentSceneIndex - 1].moralDilemaChosenOption;
+        int chosenOption = MoralDilemmaStates[currentSceneIndex - 1].MoralDilemmaChosenOption;
         return chosenOption;
     }
 
+    // Get the current moral dilemma data for the active scene
     public MoralDilemmaData GetCurrentMoralDilemmaData()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        return moralDilemmaStates[currentSceneIndex];
+        return MoralDilemmaStates[currentSceneIndex];
     }
 
+    // Convert the captured coins amount to a formatted string
     private string GetStringForCoinAmount(int capturedCoins)
     {
         return capturedCoins.ToString() + "/" + Constants.CoinObjective;

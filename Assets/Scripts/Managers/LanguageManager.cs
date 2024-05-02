@@ -1,21 +1,29 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages the Languages
+/// </summary>
 public class LanguageManager : MonoBehaviour
 {
     // Singleton instance
     public static LanguageManager Instance { get; private set; }
 
-    public Language currentLanguage;
-    public TextAsset englishLocalizationFile;
-    public TextAsset portugueseLocalizationFile;
+    // Current language selected
+    public Language CurrentLanguage;
 
-    private Dictionary<string, string> localizedText;
+    // Localization files for the languages
+    [Header("Languages")]
+    public TextAsset EnglishLocalizationFile;
+    public TextAsset PortugueseLocalizationFile;
+
+    // Dictionary to store localized text
+    private Dictionary<string, string> LocalizedText;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Load localized text on start
         LoadLocalizedText();
     }
 
@@ -33,39 +41,45 @@ public class LanguageManager : MonoBehaviour
         }
     }
 
+    // Method to set the current language
     public void SetLanguage(Language language)
     {
-        currentLanguage = language;
+        CurrentLanguage = language;
         LoadLocalizedText();
     }
 
+    // Method to get localized text by key
     public string GetLocalizedText(string key)
     {
-        if (localizedText.ContainsKey(key))
-            return localizedText[key];
+        if (LocalizedText.ContainsKey(key))
+            return LocalizedText[key];
         else
             return "KEY_NOT_FOUND";
     }
 
+    // Method to load localized text from JSON files
     private void LoadLocalizedText()
     {
-        localizedText = new Dictionary<string, string>();
+        // Initialize the dictionary
+        LocalizedText = new Dictionary<string, string>();
 
         string json;
 
-        switch (currentLanguage)
+        // Load JSON based on current language
+        switch (CurrentLanguage)
         {
             case Language.English:
-                json = englishLocalizationFile.text;
+                json = EnglishLocalizationFile.text;
                 break;
             case Language.Portuguese:
-                json = portugueseLocalizationFile.text;
+                json = PortugueseLocalizationFile.text;
                 break;
             default:
-                json = englishLocalizationFile.text;
+                json = EnglishLocalizationFile.text;
                 break;
         }
 
+        // Deserialize JSON into LocalizationData object
         LocalizationData loadedData = JsonUtility.FromJson<LocalizationData>(json);
 
         // Check if loadedData is null
@@ -82,13 +96,14 @@ public class LanguageManager : MonoBehaviour
             return;
         }
 
+        // Add every item found
         foreach (LocalizationItem item in loadedData.items)
         {
-            localizedText.Add(item.key, item.value);
+            LocalizedText.Add(item.key, item.value);
         }
 
         // After the loop, check if items were loaded successfully
-        if (localizedText.Count == 0)
+        if (LocalizedText.Count == 0)
         {
             Debug.LogWarning("No localization items loaded.");
         }

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// This script extends the ClickButton class to handle clicking on a watch in the game.
+/// </summary>
 public class ClickWatch : ClickButton
 {
     public GameObject Touchscreen;
@@ -7,11 +10,12 @@ public class ClickWatch : ClickButton
     public GameObject Question;
     public SceneController SceneController;
 
+    // Override the Action method to perform specific actions when the watch is clicked
     public override void Action()
     {
         Touchscreen.SetActive(false);
         Joystick.SetActive(false);
         Question.SetActive(true);
-        SceneController.GetCurrentMoralDilemmaData().timestamps.StartTimer();
+        SceneController.GetCurrentMoralDilemmaData().Timestamps.StartTimer();
     }
 }

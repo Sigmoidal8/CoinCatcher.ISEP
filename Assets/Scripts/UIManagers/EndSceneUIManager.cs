@@ -2,71 +2,76 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters;
-using Newtonsoft.Json;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Manages the UI elements in the end scene, such as displaying end text, morality result, and quitting button.
+/// </summary>
 public class EndSceneUIManager : MonoBehaviour
 {
-    public TextMeshProUGUI endText;
-    public TextMeshProUGUI quitButton;
-    public TextMeshProUGUI moralityResult;
-    private LanguageManager languageManager;
-    private double moralityValue;
-    private TimeMeasurement gametime;
+    public TextMeshProUGUI EndText;
+    public TextMeshProUGUI QuitButton;
+    public TextMeshProUGUI MoralityResult;
+    private LanguageManager LanguageManager;
+    private double MoralityValue;
+    private TimeMeasurement Gametime;
 
     // Start is called before the first frame update
     void Start()
     {
         // Find the LanguageManager in the scene or create one if not found
-        languageManager = FindObjectOfType<LanguageManager>();
-        if (languageManager == null)
+        LanguageManager = FindObjectOfType<LanguageManager>();
+        if (LanguageManager == null)
         {
             GameObject languageManagerObject = new GameObject(Constants.LanguageManagerComponent);
-            languageManager = languageManagerObject.AddComponent<LanguageManager>();
+            LanguageManager = languageManagerObject.AddComponent<LanguageManager>();
         }
 
         SceneController sceneController = GameObject.Find(Constants.SceneControllerComponent).GetComponent<SceneController>();
-        sceneController.gameTime.StopTimer();
-        gametime = sceneController.gameTime;
-
+        sceneController.GameTime.StopTimer();
+        Gametime = sceneController.GameTime;
 
         string playerName = PlayerPrefs.GetString(Constants.PlayerFabsPlayerName);
         PlayerData playerData = new PlayerData(playerName);
 
-        // Create new JSON file name
-        string newJsonFileName = $"{playerData.username}.json";
-        string newJsonFilePath = Path.Combine(Application.persistentDataPath, newJsonFileName);
-        GameData gameData = new GameData(sceneController.moralDilemmaStates, gametime);
-        moralityValue = ((sceneController.moralityValue / (sceneController.moralDilemmaStates.Where(states => states.completed == true).Count() - 1)) - 1) / 4;
+        // Read the existing JSON file
+        string existingJsonFilePathPlayer = Path.Combine(Application.persistentDataPath, $"userfiles.json");
+        string existingJsonContent = File.ReadAllText(existingJsonFilePathPlayer);
+
+        // Deserialize JSON content into a UserData object
+        FinalDataList existingUserDataList = FinalJsonSerializer.DeserializeFinalDataList(existingJsonContent);
+
+        GameData gameData = new GameData(sceneController.MoralDilemmaStates, Gametime);
+        MoralityValue = ((sceneController.MoralityValue / (sceneController.MoralDilemmaStates.Where(states => states.Completed == true).Count() - 1)) - 1.66) / 3.09;
         List<Trait> traits = new List<Trait>
             {
-                new Trait("Morality", moralityValue)
+                new Trait("Morality", MoralityValue)
             };
         TraitData traitData = new TraitData(traits);
         FinalData dataToBeStored = new FinalData(playerData, gameData, traitData);
-        string dataInString = FinalJsonSerializer.SerializeData(dataToBeStored);
+        existingUserDataList.userData.Add(dataToBeStored);
+        string dataInString = FinalJsonSerializer.SerializeDataList(existingUserDataList);
         Debug.Log(dataInString);
 
-        File.WriteAllText(newJsonFilePath, dataInString);
+        File.WriteAllText(existingJsonFilePathPlayer, dataInString);
 
-        string newJsonFileNamePlayer = $"{playerData.username}_userfile.json";
+        string newJsonFileNamePlayer = $"{playerData.Username}_userfile.json";
         string newJsonFilePathPlayer = Path.Combine(Application.persistentDataPath, newJsonFileNamePlayer);
         string moralityDescription = "";
-        switch (moralityValue)
+        switch (MoralityValue)
         {
             case <= 0.33f:
-                moralityDescription = languageManager.GetLocalizedText(LanguageFields.moral_result_1.ToString());
+                moralityDescription = LanguageManager.GetLocalizedText(LanguageFields.moral_result_1.ToString());
                 break;
-            case <= 0.66f:
-                moralityDescription = languageManager.GetLocalizedText(LanguageFields.moral_result_2.ToString());
+            case < 0.67f:
+                moralityDescription = LanguageManager.GetLocalizedText(LanguageFields.moral_result_2.ToString());
                 break;
-            case > 0.66:
-                moralityDescription = languageManager.GetLocalizedText(LanguageFields.moral_result_3.ToString());
+            case >= 0.67f:
+                moralityDescription = LanguageManager.GetLocalizedText(LanguageFields.moral_result_3.ToString());
                 break;
         }
-        TimeSpan timeSpan = TimeSpan.FromSeconds(gametime.timeTaken);
+        TimeSpan timeSpan = TimeSpan.FromSeconds(Gametime.TimeTaken);
         UserData userData = new UserData(string.Format("{0:00}:{1:00}", (int)timeSpan.TotalMinutes, timeSpan.Seconds), moralityDescription, traitData);
         dataInString = JsonUtility.ToJson(userData);
         Debug.Log(dataInString);
@@ -80,8 +85,8 @@ public class EndSceneUIManager : MonoBehaviour
     // Update UI text elements with localized text
     private void UpdateUITexts(TimeSpan timeSpan)
     {
-        endText.text = languageManager.GetLocalizedText(LanguageFields.end_text.ToString());
-        quitButton.text = languageManager.GetLocalizedText(LanguageFields.quit_button.ToString());
-        moralityResult.text = languageManager.GetLocalizedText(LanguageFields.morality_result.ToString()) + string.Format("{0:00}:{1:00}", (int)timeSpan.TotalMinutes, timeSpan.Seconds);
+        EndText.text = LanguageManager.GetLocalizedText(LanguageFields.end_text.ToString());
+        QuitButton.text = LanguageManager.GetLocalizedText(LanguageFields.quit_button.ToString());
+        MoralityResult.text = LanguageManager.GetLocalizedText(LanguageFields.morality_result.ToString()) + string.Format("{0:00}:{1:00}", (int)timeSpan.TotalMinutes, timeSpan.Seconds);
     }
 }

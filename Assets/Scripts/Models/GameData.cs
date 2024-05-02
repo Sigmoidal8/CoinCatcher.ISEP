@@ -1,17 +1,19 @@
-using System.Collections.Generic;
-
+/// <summary>
+/// Serializable class to store game data
+/// </summary>
 [System.Serializable]
 public class GameData
 {
-    // Indicates whether the dilemma is completed
-    public MoralDilemmaData[] moralDilemmaData;
+    // Array to store moral dilemma data
+    public MoralDilemmaData[] MoralDilemmaData;
 
-    public TimeMeasurement gameTime;
+    // Game time measurement
+    public TimeMeasurement GameTime;
 
     // Constructor for MoralDilemmaData class
-    public GameData(MoralDilemmaData[] moralDilemmaData, TimeMeasurement gameTime)
+    public GameData(MoralDilemmaData[] MoralDilemmaData, TimeMeasurement GameTime)
     {
-        this.moralDilemmaData = moralDilemmaData;
-        this.gameTime = gameTime;
+        this.MoralDilemmaData = MoralDilemmaData;
+        this.GameTime = GameTime;
     }
 }

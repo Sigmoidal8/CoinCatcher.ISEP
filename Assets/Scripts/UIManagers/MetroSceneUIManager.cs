@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEngine;
 
 public class MetroSceneUIManager : GeneralCanvasUIManager
 {
@@ -30,9 +29,9 @@ public class MetroSceneUIManager : GeneralCanvasUIManager
     // Update additional UI text element with localized text
     private void UpdateAdditionalText()
     {
-        HomelessDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.homeless_dilema_message.ToString());
-        HomelessDilemaMessageButton1.text = languageManager.GetLocalizedText(LanguageFields.homeless_dilema_message_button1.ToString());
-        HomelessDilemaMessageButton2.text = languageManager.GetLocalizedText(LanguageFields.homeless_dilema_message_button2.ToString());
-        HomelessDilemaMessageButton3.text = languageManager.GetLocalizedText(LanguageFields.homeless_dilema_message_button3.ToString());
+        HomelessDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.homeless_dilemma_message.ToString());
+        HomelessDilemaMessageButton1.text = languageManager.GetLocalizedText(LanguageFields.homeless_dilemma_message_button1.ToString());
+        HomelessDilemaMessageButton2.text = languageManager.GetLocalizedText(LanguageFields.homeless_dilemma_message_button2.ToString());
+        HomelessDilemaMessageButton3.text = languageManager.GetLocalizedText(LanguageFields.homeless_dilemma_message_button3.ToString());
     }
 }

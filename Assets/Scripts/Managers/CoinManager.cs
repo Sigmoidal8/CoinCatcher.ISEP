@@ -3,23 +3,25 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Manages coins in the game
+/// <summary>
+/// Manages coins in the game
+/// </summary>
 [System.Serializable]
 public class CoinManager : MonoBehaviour
 {
-    // Static instance of CoinManager
-    public static CoinManager instance;
+    // Static Instance of CoinManager
+    public static CoinManager Instance;
 
     // Dictionary to store scene name and corresponding coin data
-    private Dictionary<string, SceneCoinsData> sceneCoins = new Dictionary<string, SceneCoinsData>();
+    private Dictionary<string, SceneCoinsData> SceneCoins = new Dictionary<string, SceneCoinsData>();
 
-    // Awake is called when the script instance is being loaded
+    // Awake is called when the script Instance is being loaded
     void Awake()
     {
-        // Ensure only one instance of CoinManager exists across scenes
-        if (instance == null)
+        // Ensure only one Instance of CoinManager exists across scenes
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -38,10 +40,10 @@ public class CoinManager : MonoBehaviour
         LoadCoins(scene.name);
 
         // Check if the scene name is already in the dictionary
-        if (!instance.sceneCoins.ContainsKey(scene.name))
+        if (!Instance.SceneCoins.ContainsKey(scene.name))
         {
             // If not, add the scene to the dictionary with an empty list of coins
-            instance.sceneCoins.Add(scene.name, new SceneCoinsData());
+            Instance.SceneCoins.Add(scene.name, new SceneCoinsData());
         }
 
         // Get all coin objects in the scene
@@ -50,7 +52,7 @@ public class CoinManager : MonoBehaviour
         // Add each coin object to the list for the current scene
         foreach (GameObject coinObject in coinObjects)
         {
-            if (instance.sceneCoins[scene.name].coins.Where(x => x.coinObjectId == coinObject.name).Count() == 0)
+            if (Instance.SceneCoins[scene.name].Coins.Where(x => x.CoinObjectId == coinObject.name).Count() == 0)
             {
                 AddCoin(coinObject, scene.name);
             }
@@ -60,7 +62,7 @@ public class CoinManager : MonoBehaviour
     // Add a coin to the list for the specified scene
     private void AddCoin(GameObject coinObject, string sceneName)
     {
-        instance.sceneCoins[sceneName].coins.Add(new Coin(coinObject, false));
+        Instance.SceneCoins[sceneName].Coins.Add(new Coin(coinObject, false));
     }
 
     // Method to handle collecting a coin
@@ -69,15 +71,14 @@ public class CoinManager : MonoBehaviour
         // Get the scene name of the coin object
         string sceneName = coinObject.scene.name;
 
-        // Get the list of coins for the current scene
-
-        foreach (Coin coin in instance.sceneCoins[sceneName].coins)
+        // Iterate through coins to see which coin was collected
+        foreach (Coin coin in Instance.SceneCoins[sceneName].Coins)
         {
-            if (coin.coinObjectId == coinObject.name)
+            if (coin.CoinObjectId == coinObject.name)
             {
                 // Update coin state
                 coinObject.SetActive(false);
-                coin.collected = true;
+                coin.Collected = true;
                 break;
             }
         }
@@ -91,15 +92,13 @@ public class CoinManager : MonoBehaviour
         // Get the scene name of the coin object
         string sceneName = coinObject.scene.name;
 
-        // Get the list of coins for the current scene
-        List<Coin> coins = instance.sceneCoins[sceneName].coins;
-
-        foreach (Coin coin in coins)
+        // Iterate through coins to see if the coin was collected
+        foreach (Coin coin in Instance.SceneCoins[sceneName].Coins)
         {
-            if (coin.coinObjectId == coinObject.name)
+            if (coin.CoinObjectId == coinObject.name)
             {
                 coinObject.SetActive(false);
-                return coin.collected;
+                return coin.Collected;
             }
         }
         return false;
@@ -108,8 +107,8 @@ public class CoinManager : MonoBehaviour
     // Method to save coins data for a scene
     private void SaveCoins(string sceneName)
     {
-        SceneCoinsData sceneCoinsData = new SceneCoinsData(instance.sceneCoins[sceneName].coins);
-        string json = JsonUtility.ToJson(sceneCoinsData);
+        SceneCoinsData SceneCoinsData = new SceneCoinsData(Instance.SceneCoins[sceneName].Coins);
+        string json = JsonUtility.ToJson(SceneCoinsData);
         PlayerPrefs.SetString(sceneName + Constants.CoinDataPlayerPrefs, json);
         PlayerPrefs.Save();
     }
@@ -125,13 +124,14 @@ public class CoinManager : MonoBehaviour
 
             // Iterate through the loaded coins
             SceneCoinsData loadedCoins = new SceneCoinsData();
-            foreach (Coin coinData in coinDataList.coins)
+            foreach (Coin coinData in coinDataList.Coins)
             {
-                loadedCoins.coins.Add(coinData);
-                GameObject coinObject = GameObject.Find(coinData.coinObjectId);
+                loadedCoins.Coins.Add(coinData);
+                GameObject coinObject = GameObject.Find(coinData.CoinObjectId);
                 if (coinObject != null)
                 {
-                    if (coinData.collected)
+                    // If coin collected disable it from the scene
+                    if (coinData.Collected)
                     {
                         coinObject.SetActive(false);
                     }
@@ -142,33 +142,36 @@ public class CoinManager : MonoBehaviour
                 }
             }
             // Replace the existing list of coins with the loaded list
-            if (instance.sceneCoins.ContainsKey(sceneName))
+            if (Instance.SceneCoins.ContainsKey(sceneName))
             {
-                instance.sceneCoins[sceneName].coins = loadedCoins.coins;
+                Instance.SceneCoins[sceneName].Coins = loadedCoins.Coins;
             }
             else
             {
-                instance.sceneCoins.Add(sceneName, loadedCoins);
+                Instance.SceneCoins.Add(sceneName, loadedCoins);
                 Debug.LogWarning("Scene coins data not found for scene: " + sceneName);
             }
         }
     }
 
+    // Method to check if there is any coin in the scene
     public bool IsAnyCoinFromSceneCollected()
     {
-        IEnumerable<Coin> coinsNotCollected = instance.sceneCoins[SceneManager.GetActiveScene().name].coins.Where(coin => coin.collected == true);
+        IEnumerable<Coin> coinsNotCollected = Instance.SceneCoins[SceneManager.GetActiveScene().name].Coins.Where(coin => coin.Collected == true);
         return coinsNotCollected.Count() != 0;
     }
 
+    // Method to check if all coins have been collected in the scene
     public bool AreAllCoinsFromSceneCollected()
     {
-        IEnumerable<Coin> coinsNotCollected = instance.sceneCoins[SceneManager.GetActiveScene().name].coins.Where(coin => coin.collected == false);
+        IEnumerable<Coin> coinsNotCollected = Instance.SceneCoins[SceneManager.GetActiveScene().name].Coins.Where(coin => coin.Collected == false);
         return coinsNotCollected.Count() == 0;
     }
 
+    // Method to check how many coins missing from the scene
     public int CountMissingCoinsFromScene()
     {
-        List<Coin> coinsNotCollected = instance.sceneCoins[SceneManager.GetActiveScene().name].coins.Where(coin => coin.collected == false).ToList();
+        List<Coin> coinsNotCollected = Instance.SceneCoins[SceneManager.GetActiveScene().name].Coins.Where(coin => coin.Collected == false).ToList();
         return coinsNotCollected.Count();
     }
 

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 public class TraitData
 {
     // Indicates whether the dilemma is completed
-    public List<Trait> traits;
+    public List<Trait> Traits;
 
     // Constructor for MoralDilemmaData class
-    public TraitData(List<Trait> traits)
+    public TraitData(List<Trait> Traits)
     {
-        this.traits = traits;
+        this.Traits = Traits;
     }
 }

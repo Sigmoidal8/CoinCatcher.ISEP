@@ -459,9 +459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69247f9a9b45594798871733a9acd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endText: {fileID: 1586754954}
-  quitButton: {fileID: 2020685391}
-  moralityResult: {fileID: 543606500}
+  EndText: {fileID: 1586754954}
+  QuitButton: {fileID: 2020685391}
+  MoralityResult: {fileID: 543606500}
 --- !u!4 &1160393151
 Transform:
   m_ObjectHideFlags: 0
@@ -866,8 +866,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SettingsPanel: {fileID: 0}
-  PreviousScene: 
-  NextScene: 
+  UsernamePanel: {fileID: 0}
+  Alert: {fileID: 0}
+  InputField: {fileID: 0}
 --- !u!4 &1899736869
 Transform:
   m_ObjectHideFlags: 0
@@ -1121,24 +1122,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3595c9489b1db6d44a74b5b8acb29d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moralDilemmaStates: []
-  moralityValue: 0
-  totalCoins: 0
-  moralityValuesPerSceneList:
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  gameTime:
-    startTime: 0
-    endTime: 0
-    timeTaken: 0
+  MoralDilemmaStates: []
+  MoralityValue: 0
+  TotalCoins: 0
+  MoralityValuesPerSceneList:
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  GameTime:
+    StartTime: 0
+    EndTime: 0
+    TimeTaken: 0
+  IsGameOver: 0
 --- !u!4 &2056133005
 Transform:
   m_ObjectHideFlags: 0

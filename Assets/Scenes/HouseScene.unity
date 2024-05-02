@@ -879,10 +879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &273375100 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3357617043927591852, guid: 5baf9c87194546f4a895a0a0bf3ec49b, type: 3}
@@ -2027,8 +2027,8 @@ MonoBehaviour:
   LeftArrowText: {fileID: 1254687202}
   RightArrow: {fileID: 874236176}
   RightArrowText: {fileID: 606962969}
-  PreviousSceneNameString: 8
-  NextSceneNameString: 10
+  PreviousSceneNameString: 9
+  NextSceneNameString: 11
 --- !u!4 &426923874
 Transform:
   m_ObjectHideFlags: 0
@@ -2210,10 +2210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1001 &520271046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2353,10 +2353,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &545217158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,8 +2404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4454d5f1d916d4b9e0eab26d922964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsManager: {fileID: 1503849878}
-  sceneController: {fileID: 994476842}
+  CoinsManager: {fileID: 1503849878}
+  SceneController: {fileID: 994476842}
 --- !u!114 &545217161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3445,8 +3445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679501b8c11ba9f47bb669b83384ace8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crying: {fileID: 686981720}
-  sceneController: {fileID: 994476842}
+  Crying: {fileID: 686981720}
+  SceneController: {fileID: 994476842}
 --- !u!1001 &730883446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4111,11 +4111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdecee1d34ed20e41bda067b03441299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCounterText: {fileID: 1594289910}
-  animationDuration: 1.5
-  scaleFactor: 1.5
-  coinCollectedAudioClip: {fileID: 8300000, guid: ca46f333d111f344783113babb691f9b, type: 3}
-  coinCollectedAudioSource: {fileID: 778558821}
+  CoinCounterText: {fileID: 1594289910}
+  AnimationDuration: 1.5
+  ScaleFactor: 1.5
+  CoinCollectedAudioClip: {fileID: 8300000, guid: ca46f333d111f344783113babb691f9b, type: 3}
+  CoinCollectedAudioSource: {fileID: 778558821}
 --- !u!82 &778558821
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4882,17 +4882,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5304bef6524659b4cb4d2eab0a30e9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quitButton: {fileID: 1149662210}
-  audioSource: {fileID: 933982864}
-  audioClip: {fileID: 8300000, guid: 7eb79304a7580034ca31c0985d559d1f, type: 3}
+  QuitButton: {fileID: 1149662210}
+  HelpDilemmaMessage: {fileID: 2134944678}
+  HelpDilemmaMessageClose: {fileID: 1926909984}
+  AudioSource: {fileID: 933982864}
+  AudioClip: {fileID: 8300000, guid: 7eb79304a7580034ca31c0985d559d1f, type: 3}
   IntroductionMessage: {fileID: 593900804}
   IntroductionMessageButton1: {fileID: 26632473}
   IntroductionMessageButton2: {fileID: 326990222}
   WatchDilemaMessage: {fileID: 750548430}
   WatchDilemaMessageButton1: {fileID: 1252089587}
   WatchDilemaMessageButton2: {fileID: 97404960}
-  HelpDilemmaMessage: {fileID: 2134944678}
-  HelpDilemmaMessageClose: {fileID: 1926909984}
   WatchDilemaClosingMessageButton: {fileID: 1385697992}
 --- !u!4 &933982863
 Transform:
@@ -5021,14 +5021,14 @@ MonoBehaviour:
   Joystick: {fileID: 616961128}
   InfoCanvas: {fileID: 902036559}
   DilemaMessagePanel: {fileID: 649396691}
+  HelpPanel: {fileID: 551107438}
   Watch: {fileID: 814928026}
   Option1Button: {fileID: 936667374}
   Option2Button: {fileID: 1066101051}
   CloseMessageButton: {fileID: 1921433907}
   HelpPanelButton: {fileID: 868567590}
-  HelpPanel: {fileID: 551107438}
   UIManager: {fileID: 933982862}
-  sceneController: {fileID: 994476842}
+  SceneController: {fileID: 994476842}
 --- !u!1 &936667374
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,25 +5242,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3595c9489b1db6d44a74b5b8acb29d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moralDilemmaStates: []
-  moralityValue: 0
-  totalCoins: 0
-  moralityValuesPerSceneList:
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  gameTime:
-    startTime: 0
-    endTime: 0
-    timeTaken: 0
-  isGameOver: 0
+  MoralDilemmaStates: []
+  MoralityValue: 0
+  TotalCoins: 0
+  MoralityValuesPerSceneList:
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  GameTime:
+    StartTime: 0
+    EndTime: 0
+    TimeTaken: 0
+  IsGameOver: 0
 --- !u!4 &994476843
 Transform:
   m_ObjectHideFlags: 0
@@ -5415,10 +5415,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1054048994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9101425309829972476, guid: 5baf9c87194546f4a895a0a0bf3ec49b, type: 3}
@@ -5969,10 +5969,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1252089585
 GameObject:
   m_ObjectHideFlags: 0
@@ -7785,10 +7785,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1756820974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9219076654516868491, guid: 5baf9c87194546f4a895a0a0bf3ec49b, type: 3}
@@ -9001,10 +9001,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &2134944676
 GameObject:
   m_ObjectHideFlags: 0

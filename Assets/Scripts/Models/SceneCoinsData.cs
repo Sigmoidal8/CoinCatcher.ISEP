@@ -1,20 +1,23 @@
 using System.Collections.Generic;
 
+/// <summary>
+/// Represents data related to coins in a scene.
+/// </summary>
 [System.Serializable]
 public class SceneCoinsData
 {
-    // List of coins in the scene
-    public List<Coin> coins;
+    // List of Coins in the scene
+    public List<Coin> Coins;
 
     // Constructor for SceneCoinsData class
-    public SceneCoinsData(List<Coin> coins)
+    public SceneCoinsData(List<Coin> Coins)
     {
-        this.coins = coins;
+        this.Coins = Coins;
     }
 
     // Default constructor for SceneCoinsData class
     public SceneCoinsData()
     {
-        this.coins = new List<Coin>();
+        this.Coins = new List<Coin>();
     }
 }

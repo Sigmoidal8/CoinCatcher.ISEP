@@ -1,15 +1,19 @@
+/// <summary>
+/// Represents a trait with its name and value.
+/// </summary>
 [System.Serializable]
 public class Trait
 {
-    // Indicates whether the dilemma is completed
-    public string trait;
+    // The name of the trait.
+    public string Name;
 
-    public double value;
+    // The value of the trait.
+    public double Value;
 
-    // Constructor for MoralDilemmaData class
-    public Trait(string trait, double value)
+    // Constructor for Trait class
+    public Trait(string Name, double Value)
     {
-        this.trait = trait;
-        this.value = value;
+        this.Name = Name;
+        this.Value = Value;
     }
 }

@@ -1,39 +1,18 @@
+using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
 
+// This static class provides a method to serialize final game data into JSON format.
 static class FinalJsonSerializer
 {
-    public static string SerializeData(FinalData data)
+    // Method to serialize a list of final game data into JSON format
+    public static string SerializeDataList(FinalDataList dataList)
     {
-        string playerDataJson = JsonUtility.ToJson(data.playerData);
-
-    string metricsDataJson = "{";
-
-    // Serialize moral dilemma data
-    metricsDataJson += "\"MoralDilemmaData\":[";
-    foreach (MoralDilemmaData moralDilemmaData in data.metricsData.moralDilemmaData)
-    {
-        string moralDilemmaDataJson = JsonUtility.ToJson(moralDilemmaData);
-        metricsDataJson += moralDilemmaDataJson + ",";
+        return JsonConvert.SerializeObject(dataList);
     }
-    metricsDataJson = metricsDataJson.TrimEnd(',') + "],";
 
-    // Serialize gameTime
-    string timeMeasurementJson = JsonUtility.ToJson(data.metricsData.gameTime);
-    metricsDataJson += "\"TimeMeasurement\":" + timeMeasurementJson;
-
-    // Close MetricsData object
-    metricsDataJson += "}";
-
-    string personalityDataJson = "[";
-    foreach (Trait trait in data.personalityData.traits)
+    public static FinalDataList DeserializeFinalDataList(string json)
     {
-        string traitJson = JsonUtility.ToJson(trait);
-        personalityDataJson += traitJson + ",";
-    }
-    personalityDataJson = personalityDataJson.TrimEnd(',') + "]";
-
-    return "{\"PlayerData\":" + playerDataJson +
-        ",\"MetricsData\":" + metricsDataJson +
-        ",\"PersonalityData\":" + personalityDataJson + "}";
+        return JsonConvert.DeserializeObject<FinalDataList>(json);
     }
 }

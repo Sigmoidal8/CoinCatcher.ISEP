@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class GeneralCanvasUIManager : MonoBehaviour
 {
-    public TextMeshProUGUI quitButton;
+    public TextMeshProUGUI QuitButton;
     public TextMeshProUGUI HelpDilemmaMessage;
     public TextMeshProUGUI HelpDilemmaMessageClose;
-    public AudioSource audioSource;
-    public AudioClip audioClip;
+    public AudioSource AudioSource;
+    public AudioClip AudioClip;
 
     protected LanguageManager languageManager;
 
@@ -30,18 +28,20 @@ public class GeneralCanvasUIManager : MonoBehaviour
 
     void Update()
     {
-        if (!audioSource.isPlaying && audioClip != null)
+        //Plays the background audio of the scene
+        if (!AudioSource.isPlaying && AudioClip != null)
         {
-            audioSource.PlayOneShot(audioClip);
+            AudioSource.PlayOneShot(AudioClip);
         }
     }
 
     // Update UI text elements with localized text
     protected virtual void UpdateUITexts()
     {
-        quitButton.text = languageManager.GetLocalizedText(LanguageFields.quit_button.ToString());
+        QuitButton.text = languageManager.GetLocalizedText(LanguageFields.quit_button.ToString());
     }
 
+    //Fills the help message according to the coins left on the scene
     public void FillHelpMessage(int coinsLeftOnScene)
     {
         if (coinsLeftOnScene == 0)

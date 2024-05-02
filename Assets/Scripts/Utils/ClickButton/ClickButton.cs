@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script allows clicking on a game object with a collider attached to trigger an action.
+/// </summary>
 public class ClickButton : MonoBehaviour
 {
     void FixedUpdate()
@@ -30,5 +31,6 @@ public class ClickButton : MonoBehaviour
         }
     }
 
+    // The action to perform when the button is clicked
     public virtual void Action() { }
 }

@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEngine;
 
 public class RobberySceneUIManager : GeneralCanvasUIManager
 {
@@ -30,9 +29,9 @@ public class RobberySceneUIManager : GeneralCanvasUIManager
     // Update additional UI text element with localized text
     private void UpdateAdditionalText()
     {
-        RobberyDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.robbery_dilema_message.ToString());
-        RobberyDilemaMessageButton1.text = languageManager.GetLocalizedText(LanguageFields.robbery_dilema_message_button1.ToString());
-        RobberyDilemaMessageButton2.text = languageManager.GetLocalizedText(LanguageFields.robbery_dilema_message_button2.ToString());
-        RobberyDilemaMessageButton3.text = languageManager.GetLocalizedText(LanguageFields.robbery_dilema_message_button3.ToString());
+        RobberyDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.robbery_dilemma_message.ToString());
+        RobberyDilemaMessageButton1.text = languageManager.GetLocalizedText(LanguageFields.robbery_dilemma_message_button1.ToString());
+        RobberyDilemaMessageButton2.text = languageManager.GetLocalizedText(LanguageFields.robbery_dilemma_message_button2.ToString());
+        RobberyDilemaMessageButton3.text = languageManager.GetLocalizedText(LanguageFields.robbery_dilemma_message_button3.ToString());
     }
 }

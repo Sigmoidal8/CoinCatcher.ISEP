@@ -22,7 +22,7 @@
         },
         {
             "key": "next_button",
-            "value": "Proximo"
+            "value": "Próximo"
         },
         {
             "key": "language",
@@ -78,7 +78,7 @@
         },
         {
             "key": "tutorial_message5",
-            "value": "Concluiste o tutorial, podes agora avançar para o jogo!"
+            "value": "Concluíste o tutorial, podes agora avançar para o jogo!"
         },
         {
             "key": "introduction_message",
@@ -93,76 +93,76 @@
             "value": "Lamento, mas não tenho tempo para isso"
         },
         {
-            "key": "watch_dilema_message",
+            "key": "watch_dilemma_message",
             "value": "O que é que quer fazer?"
         },
         {
-            "key": "watch_dilema_message_button1",
+            "key": "watch_dilemma_message_button1",
             "value": "Devolver o relógio ao Miguel"
         },
         {
-            "key": "watch_dilema_message_button2",
+            "key": "watch_dilemma_message_button2",
             "value": "Vender o relógio por 3 moedas"
         },
         {
-            "key": "watch_dilema_closing_message",
-            "value": "Muito obrigado por me teres devolvido o relógio, és incrível!"
+            "key": "watch_dilemma_closing_message",
+            "value": "Muito obrigado por me teres devolvido o relógio"
         },
         {
-            "key": "homeless_dilema_message",
+            "key": "homeless_dilemma_message",
             "value": "O que é que quer fazer?"
         },
         {
-            "key": "homeless_dilema_message_button1",
+            "key": "homeless_dilemma_message_button1",
             "value": "Dar 2 moedas ao sem-abrigo"
         },
         {
-            "key": "homeless_dilema_message_button2",
+            "key": "homeless_dilemma_message_button2",
             "value": "Tirar as 3 moedas do sem-abrigo"
         },
         {
-            "key": "homeless_dilema_message_button3",
+            "key": "homeless_dilemma_message_button3",
             "value": "Ignorar"
         },
         {
-            "key": "robbery_dilema_message",
+            "key": "robbery_dilemma_message",
           
             "value": "O idoso acabou de ser assaltado, o que é que queres fazer?"
         },
         {
-            "key": "robbery_dilema_message_button1",
+            "key": "robbery_dilemma_message_button1",
             "value": "Seguir o ladrão"
         },
         {
-            "key": "robbery_dilema_message_button2",
+            "key": "robbery_dilemma_message_button2",
             "value": "Nada porque tenho medo de me magoar"
         },
         {
-            "key": "robbery_dilema_message_button3",
+            "key": "robbery_dilemma_message_button3",
             "value": "Nada porque o problema não é meu"
         },
         {
-            "key": "thief_dilema_message",
+            "key": "thief_dilemma_message",
             "value": "Peço desculpa, mas preciso deste dinheiro para alimentar os meus dois filhos. Há muito tempo que tento arranjar um emprego, mas ninguém me aceita..."
         },
         {
-            "key": "thief_dilema_message2",
+            "key": "thief_dilemma_message2",
             "value": "O que é que quer fazer?"
         },
         {
-            "key": "thief_dilema_message_button1",
+            "key": "thief_dilemma_message_button1",
             "value": "Pegar no dinheiro e devolver ao idoso"
         },
         {
-            "key": "thief_dilema_message_button2",
+            "key": "thief_dilemma_message_button2",
             "value": "Pegar no dinheiro e ficar com as 3 moedas"
         },
         {
-            "key": "thief_dilema_message_button3",
-            "value": "Pegar no dinheiro e devolver ao idoso e dar 3 moedas a este homem"
+            "key": "thief_dilemma_message_button3",
+            "value": "Pegar no dinheiro, devolver ao idoso e dar 3 moedas a este homem"
         },
         {
-            "key": "thief_dilema_message_button4",
+            "key": "thief_dilemma_message_button4",
             "value": "Deixar o homem ficar com o dinheiro"
         },
         {
@@ -200,6 +200,10 @@
         {
             "key": "alert",
             "value": "Preencha o username"
+        },
+        {
+            "key": "username_input",
+            "value": "Preencha com o username"
         }
     ]
 }

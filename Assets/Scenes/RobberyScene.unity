@@ -1105,8 +1105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4454d5f1d916d4b9e0eab26d922964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsManager: {fileID: 1481663103}
-  sceneController: {fileID: 1632744859}
+  CoinsManager: {fileID: 1481663103}
+  SceneController: {fileID: 1632744859}
 --- !u!1 &36874303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4405224303443701526, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -1337,8 +1337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65838e9f6dce21046bc2afdfd449281c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 39190616}
-  newController: {fileID: 9100000, guid: 3dfe4fd562e23ac4e8b2e10d2ecf4750, type: 2}
+  Animator: {fileID: 39190616}
+  NewController: {fileID: 9100000, guid: 3dfe4fd562e23ac4e8b2e10d2ecf4750, type: 2}
 --- !u!114 &39190620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5594,12 +5594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a742e8ddaab4745844efff8afed5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 1632744859}
-  HelpPanelButton: {fileID: 2058329079}
-  HelpPanel: {fileID: 1049735573}
-  UIManager: {fileID: 253977792}
-  Touchscreen: {fileID: 1129389488}
-  Joystick: {fileID: 327946069}
   BriefcaseElder: {fileID: 1577303698}
   Elder: {fileID: 39190617}
   ElderSittingController: {fileID: 9100000, guid: 3dfe4fd562e23ac4e8b2e10d2ecf4750, type: 2}
@@ -5608,8 +5602,14 @@ MonoBehaviour:
   BriefcaseThief: {fileID: 612420885}
   Thief: {fileID: 403956302}
   ThiefController: {fileID: 9100000, guid: ca8d8b9f41c411846ba535d7109f29fe, type: 2}
+  Touchscreen: {fileID: 1129389488}
+  Joystick: {fileID: 327946069}
   Director: {fileID: 250597820}
   DilemmaPanel: {fileID: 436826712}
+  HelpPanelButton: {fileID: 2058329079}
+  HelpPanel: {fileID: 1049735573}
+  SceneController: {fileID: 1632744859}
+  UIManager: {fileID: 253977792}
   ArrowManager: {fileID: 1592379898}
   Player: {fileID: 2022473465}
   NPCCop: {fileID: 802227917}
@@ -5688,11 +5688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02cc6eee6be939d4784680987c7fa2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quitButton: {fileID: 1247007517}
+  QuitButton: {fileID: 1247007517}
   HelpDilemmaMessage: {fileID: 362206619}
   HelpDilemmaMessageClose: {fileID: 407912393}
-  audioSource: {fileID: 253977793}
-  audioClip: {fileID: 8300000, guid: b49863ff4e6b5334790787fbcb0095ef, type: 3}
+  AudioSource: {fileID: 253977793}
+  AudioClip: {fileID: 8300000, guid: b49863ff4e6b5334790787fbcb0095ef, type: 3}
   RobberyDilemaMessage: {fileID: 1221674378}
   RobberyDilemaMessageButton1: {fileID: 207728825}
   RobberyDilemaMessageButton2: {fileID: 658477440}
@@ -10940,8 +10940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65838e9f6dce21046bc2afdfd449281c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 403956303}
-  newController: {fileID: 9100000, guid: ca8d8b9f41c411846ba535d7109f29fe, type: 2}
+  Animator: {fileID: 403956303}
+  NewController: {fileID: 9100000, guid: ca8d8b9f41c411846ba535d7109f29fe, type: 2}
 --- !u!82 &403956307
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12374,10 +12374,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &445116910 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4384173977414275142, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -22492,10 +22492,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &891471046 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5087746192926911581, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -24079,10 +24079,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &967745796 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8227726274157466897, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -25082,10 +25082,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1023902798 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1428563736417489221, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -25763,6 +25763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1042593578}
+  - component: {fileID: 1042593579}
   m_Layer: 0
   m_Name: Blockers
   m_TagString: Untagged
@@ -25788,6 +25789,22 @@ Transform:
   - {fileID: 371034117}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1042593579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042593577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4546e3eb685eba439d97069b76f3d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1724089118}
+  BlockerColliders:
+  - {fileID: 1618256905}
+  VisibleDistance: 1.5
 --- !u!1 &1044044942 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -110258534291845629, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -27288,10 +27305,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1094038933 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4195577464052621931, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -29330,10 +29347,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1174620518 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7492721255875026537, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -37603,8 +37620,8 @@ MonoBehaviour:
   LeftArrowText: {fileID: 1179754526}
   RightArrow: {fileID: 1446009505}
   RightArrowText: {fileID: 1748169566}
-  PreviousSceneNameString: 10
-  NextSceneNameString: 12
+  PreviousSceneNameString: 11
+  NextSceneNameString: 13
 --- !u!4 &1592379899
 Transform:
   m_ObjectHideFlags: 0
@@ -38283,7 +38300,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 73440876b031b62409c0bc5200b62c36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38321,13 +38338,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618256904}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.62576425, y: -0.6257644, z: 0.32927048, w: 0.32927048}
-  m_LocalPosition: {x: -11.814817, y: 0.83984613, z: 24.189575}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.5845207, y: -0.5845209, z: 0.39791393, w: 0.39791393}
+  m_LocalPosition: {x: -11.94, y: -1.5464001, z: 24.61}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.4468142}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1042593578}
-  m_LocalEulerAnglesHint: {x: 0, y: -124.494, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: -111.51, z: 90}
 --- !u!4 &1618817093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5764316522323783143, guid: df561f64a41f1a54da5c69b22f65f41b, type: 3}
@@ -38575,25 +38592,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3595c9489b1db6d44a74b5b8acb29d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moralDilemmaStates: []
-  moralityValue: 0
-  totalCoins: 0
-  moralityValuesPerSceneList:
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  - moralityValues: []
-    moralityDescriptions: []
-  gameTime:
-    startTime: 0
-    endTime: 0
-    timeTaken: 0
-  isGameOver: 0
+  MoralDilemmaStates: []
+  MoralityValue: 0
+  TotalCoins: 0
+  MoralityValuesPerSceneList:
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  - MoralityValues: []
+    MoralityDescriptions: []
+  GameTime:
+    StartTime: 0
+    EndTime: 0
+    TimeTaken: 0
+  IsGameOver: 0
 --- !u!4 &1632744860
 Transform:
   m_ObjectHideFlags: 0
@@ -41098,10 +41115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1729662503 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3573354796577042759, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -42663,10 +42680,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392b26f009c53ed4ba93bd6eb6482538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
-  minIntensity: 0
-  maxIntensity: 3
-  glowSpeed: 0.5
+  GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
+  MinIntensity: 0
+  MaxIntensity: 3
+  GlowSpeed: 0.5
 --- !u!1 &1795393870 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1189078211666488209, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -47084,11 +47101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdecee1d34ed20e41bda067b03441299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCounterText: {fileID: 620916295}
-  animationDuration: 1.5
-  scaleFactor: 1.5
-  coinCollectedAudioClip: {fileID: 8300000, guid: ca46f333d111f344783113babb691f9b, type: 3}
-  coinCollectedAudioSource: {fileID: 2029708535}
+  CoinCounterText: {fileID: 620916295}
+  AnimationDuration: 1.5
+  ScaleFactor: 1.5
+  CoinCollectedAudioClip: {fileID: 8300000, guid: ca46f333d111f344783113babb691f9b, type: 3}
+  CoinCollectedAudioSource: {fileID: 2029708535}
 --- !u!82 &2029708535
 AudioSource:
   m_ObjectHideFlags: 0
