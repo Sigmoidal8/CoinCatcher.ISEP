@@ -1,0 +1,3 @@
+rep "CoinCatcher@Sigmoidal@cloud"
+  path "/"
+    smartbranch "/main"
