@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -12,6 +13,12 @@ public class TimeMeasurement
     public float EndTime;
     // The duration of time taken to complete the action.
     public float TimeTaken;
+    // Real time the action started
+    #nullable enable
+    public string? TimeStarted;
+    // Real time the action ended
+    public string? TimeEnded;
+    #nullable disable
 
     public void StartTimer()
     {
@@ -26,5 +33,13 @@ public class TimeMeasurement
 
         // Calculate the time taken by subtracting the start time from the end time
         TimeTaken = EndTime - StartTime;
+    }
+
+    public void MeasureInitialTime(){
+        this.TimeStarted = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
+    }
+
+    public void MeasureFinalTime(){
+        this.TimeEnded = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
     }
 }

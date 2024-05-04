@@ -23,6 +23,8 @@ public class TutorialManager : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        sceneController.GameTime.MeasureInitialTime();
+        sceneController.SaveGameData();
     }
 
     // Update is called once per frame

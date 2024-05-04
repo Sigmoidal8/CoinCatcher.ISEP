@@ -14,7 +14,7 @@ public class EndSceneUIManager : MonoBehaviour
     public TextMeshProUGUI QuitButton;
     public TextMeshProUGUI MoralityResult;
     private LanguageManager LanguageManager;
-    private double MoralityValue;
+    private double MoralityValueNormalized;
     private TimeMeasurement Gametime;
 
     // Start is called before the first frame update
@@ -30,6 +30,7 @@ public class EndSceneUIManager : MonoBehaviour
 
         SceneController sceneController = GameObject.Find(Constants.SceneControllerComponent).GetComponent<SceneController>();
         sceneController.GameTime.StopTimer();
+        sceneController.GameTime.MeasureFinalTime();
         Gametime = sceneController.GameTime;
 
         string playerName = PlayerPrefs.GetString(Constants.PlayerFabsPlayerName);
@@ -43,10 +44,11 @@ public class EndSceneUIManager : MonoBehaviour
         FinalDataList existingUserDataList = FinalJsonSerializer.DeserializeFinalDataList(existingJsonContent);
 
         GameData gameData = new GameData(sceneController.MoralDilemmaStates, Gametime);
-        MoralityValue = ((sceneController.MoralityValue / (sceneController.MoralDilemmaStates.Where(states => states.Completed == true).Count() - 1)) - 1.66) / 3.09;
+        double moralityValue = sceneController.MoralityValue / (sceneController.MoralDilemmaStates.Where(states => states.Completed == true).Count() - 1);
+        MoralityValueNormalized = (moralityValue - 1.66) / 3.09;
         List<Trait> traits = new List<Trait>
             {
-                new Trait("Morality", MoralityValue)
+                new Trait("Morality", MoralityValueNormalized, moralityValue)
             };
         TraitData traitData = new TraitData(traits);
         FinalData dataToBeStored = new FinalData(playerData, gameData, traitData);
@@ -59,15 +61,15 @@ public class EndSceneUIManager : MonoBehaviour
         string newJsonFileNamePlayer = $"{playerData.Username}_userfile.json";
         string newJsonFilePathPlayer = Path.Combine(Application.persistentDataPath, newJsonFileNamePlayer);
         string moralityDescription = "";
-        switch (MoralityValue)
+        switch (MoralityValueNormalized)
         {
-            case <= 0.33f:
+            case <= 0.35f:
                 moralityDescription = LanguageManager.GetLocalizedText(LanguageFields.moral_result_1.ToString());
                 break;
-            case < 0.67f:
+            case < 0.70f:
                 moralityDescription = LanguageManager.GetLocalizedText(LanguageFields.moral_result_2.ToString());
                 break;
-            case >= 0.67f:
+            case >= 0.70f:
                 moralityDescription = LanguageManager.GetLocalizedText(LanguageFields.moral_result_3.ToString());
                 break;
         }

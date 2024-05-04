@@ -2400,7 +2400,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.75
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9079,6 +9079,8 @@ MonoBehaviour:
     StartTime: 0
     EndTime: 0
     TimeTaken: 0
+    TimeStarted: 
+    TimeEnded: 
   IsGameOver: 0
 --- !u!4 &1963064262
 Transform:
