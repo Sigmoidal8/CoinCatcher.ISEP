@@ -57,4 +57,6 @@ public static class Constants
     
     // Coin objective value.
     public static int CoinObjective = 25;
+
+    public static string UserFileName = "moralityData.json";
 }

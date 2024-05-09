@@ -758,15 +758,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -774,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3864
+      value: -0.376
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
   MinIntensity: 0
-  MaxIntensity: 3
+  MaxIntensity: 5
   GlowSpeed: 0.5
 --- !u!1 &273375100 stripped
 GameObject:
@@ -2089,27 +2089,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5891
+      value: 7.6118
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1927
+      value: 0.1999
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.881
+      value: -10.851
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2212,7 +2212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
   MinIntensity: 0
-  MaxIntensity: 3
+  MaxIntensity: 5
   GlowSpeed: 0.5
 --- !u!1001 &520271046
 PrefabInstance:
@@ -2232,15 +2232,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2248,7 +2248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.040080518
+      value: 0.0521
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2355,7 +2355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
   MinIntensity: 0
-  MaxIntensity: 3
+  MaxIntensity: 5
   GlowSpeed: 0.5
 --- !u!1 &545217158
 GameObject:
@@ -4249,15 +4249,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6ff2ca6c516507740a9885c7797f3788, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.06
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ff2ca6c516507740a9885c7797f3788, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.06
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ff2ca6c516507740a9885c7797f3788, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.06
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ff2ca6c516507740a9885c7797f3788, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4265,11 +4265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ff2ca6c516507740a9885c7797f3788, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4274
+      value: 0.4545
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ff2ca6c516507740a9885c7797f3788, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 133.5004
+      value: 133.4525
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ff2ca6c516507740a9885c7797f3788, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5260,6 +5260,8 @@ MonoBehaviour:
     StartTime: 0
     EndTime: 0
     TimeTaken: 0
+    TimeStarted: 
+    TimeEnded: 
   IsGameOver: 0
 --- !u!4 &994476843
 Transform:
@@ -5294,15 +5296,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5310,7 +5312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.412
+      value: -0.3951
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5417,7 +5419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
   MinIntensity: 0
-  MaxIntensity: 3
+  MaxIntensity: 5
   GlowSpeed: 0.5
 --- !u!1 &1054048994 stripped
 GameObject:
@@ -5848,15 +5850,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5864,7 +5866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4076
+      value: -0.396
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5971,7 +5973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
   MinIntensity: 0
-  MaxIntensity: 3
+  MaxIntensity: 5
   GlowSpeed: 0.5
 --- !u!1 &1252089585
 GameObject:
@@ -7664,15 +7666,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7787,7 +7789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
   MinIntensity: 0
-  MaxIntensity: 3
+  MaxIntensity: 5
   GlowSpeed: 0.5
 --- !u!1 &1756820974 stripped
 GameObject:
@@ -8161,8 +8163,8 @@ RectTransform:
   m_GameObject: {fileID: 1864722055}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 750548429}
   - {fileID: 936667375}
@@ -8880,27 +8882,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.049999997
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.194
+      value: 6.1149
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.143
+      value: 0.1547
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.302
+      value: 0.4329
       objectReference: {fileID: 0}
     - target: {fileID: 2316811244612956051, guid: 3e29573f06c0a7e4fa986fff41de17af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9003,7 +9005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowMaterial: {fileID: 2100000, guid: 3712460f643bb3147889765d028e1c84, type: 2}
   MinIntensity: 0
-  MaxIntensity: 3
+  MaxIntensity: 5
   GlowSpeed: 0.5
 --- !u!1 &2134944676
 GameObject:

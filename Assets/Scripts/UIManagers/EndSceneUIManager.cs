@@ -37,7 +37,7 @@ public class EndSceneUIManager : MonoBehaviour
         PlayerData playerData = new PlayerData(playerName);
 
         // Read the existing JSON file
-        string existingJsonFilePathPlayer = Path.Combine(Application.persistentDataPath, $"userfiles.json");
+        string existingJsonFilePathPlayer = Path.Combine(Application.persistentDataPath, Constants.UserFileName);
         string existingJsonContent = File.ReadAllText(existingJsonFilePathPlayer);
 
         // Deserialize JSON content into a UserData object

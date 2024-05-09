@@ -54,7 +54,7 @@ public class ButtonController : MonoBehaviour
             // Extract name and age
             string playerName = InputField.text;
 
-            string existingJsonFilePathPlayer = Path.Combine(Application.persistentDataPath, $"userfiles.json");
+            string existingJsonFilePathPlayer = Path.Combine(Application.persistentDataPath, Constants.UserFileName);
             if(!File.Exists(existingJsonFilePathPlayer)){
                 File.WriteAllText(existingJsonFilePathPlayer, JsonUtility.ToJson("{userData:[]}"));
             }
