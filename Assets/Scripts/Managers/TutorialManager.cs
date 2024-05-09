@@ -15,21 +15,24 @@ public class TutorialManager : MonoBehaviour
     private bool FirstCoinCollected = false;
     // Flag indicating if all coins have been collected
     private bool AllCoinsCollected = false;
+    private SceneController sceneController = null;
 
     void Start()
     {
-        SceneController sceneController = FindObjectOfType<SceneController>();
+        sceneController = FindObjectOfType<SceneController>();
         if (sceneController.IsSceneDilemaCompleted())
         {
             gameObject.SetActive(false);
         }
         sceneController.GameTime.MeasureInitialTime();
+        sceneController.GetCurrentMoralDilemmaData().Timestamps.StartTimer();
         sceneController.SaveGameData();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         // Iterate through the messages before catching the first coin
         for (int i = 0; i < MessagesBeforeCatchingFirstCoin; i++)
         {
@@ -81,6 +84,8 @@ public class TutorialManager : MonoBehaviour
                     if (MessageIndex == 5)
                     {
                         gameObject.SetActive(false);
+                        sceneController.GetCurrentMoralDilemmaData().Timestamps.StopTimer();
+                        sceneController.SaveGameData();
                         FindObjectOfType<SceneController>().ResolveDillema(1);
                         FindObjectOfType<ArrowManager>().UpdateArrowVisibility();
                     }

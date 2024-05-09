@@ -18674,13 +18674,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721071670}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1838908, y: -0.18389088, z: 0.6827769, w: 0.68277663}
-  m_LocalPosition: {x: -3.66, y: 0.84, z: 35.95}
-  m_LocalScale: {x: 1, y: 1, z: 2}
+  m_LocalRotation: {x: -0.122787856, y: -0.122787856, z: 0.6963643, w: 0.6963643}
+  m_LocalPosition: {x: -3.6599998, y: 0.84000015, z: 35.95}
+  m_LocalScale: {x: 1, y: 0.30057, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1042593578}
-  m_LocalEulerAnglesHint: {x: 0, y: -30.147, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: -20, z: 90}
 --- !u!64 &721071672
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18700,7 +18700,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &721071673
@@ -25764,6 +25764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1042593578}
   - component: {fileID: 1042593579}
+  - component: {fileID: 1042593580}
   m_Layer: 0
   m_Name: Blockers
   m_TagString: Untagged
@@ -25805,6 +25806,103 @@ MonoBehaviour:
   BlockerColliders:
   - {fileID: 1618256905}
   VisibleDistance: 1.5
+  AudioSource: {fileID: 1042593580}
+--- !u!82 &1042593580
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042593577}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 27a2beb98a5c46c42b4210e10ab593d5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1044044942 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -110258534291845629, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
@@ -38277,7 +38375,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1618256906
@@ -38339,8 +38437,8 @@ Transform:
   m_GameObject: {fileID: 1618256904}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5845207, y: -0.5845209, z: 0.39791393, w: 0.39791393}
-  m_LocalPosition: {x: -11.94, y: -1.5464001, z: 24.61}
-  m_LocalScale: {x: 0.5, y: 1, z: 0.4468142}
+  m_LocalPosition: {x: -12.13, y: -2.086, z: 25.092}
+  m_LocalScale: {x: 0.3864177, y: 0.036780365, z: 0.4468142}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1042593578}
@@ -38610,6 +38708,8 @@ MonoBehaviour:
     StartTime: 0
     EndTime: 0
     TimeTaken: 0
+    TimeStarted: 
+    TimeEnded: 
   IsGameOver: 0
 --- !u!4 &1632744860
 Transform:
