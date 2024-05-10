@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -23,6 +24,8 @@ public class HouseManager : MonoBehaviour
     [Header("Managers & Controllers")]
     public HouseSceneUIManager UIManager;
     public SceneController SceneController;
+    public float DelayInSeconds = 30f;
+    public bool WatchFound = false;
 
     // Value indicating to ignore the option chosen in a dilemma
     private static int IgnoreOptionDilemaValue = 2;
@@ -59,6 +62,7 @@ public class HouseManager : MonoBehaviour
         Joystick.SetActive(true);
         TouchScreen.SetActive(true);
         InfoCanvas.SetActive(false);
+        StartCoroutine(WaitToFindWatch());
     }
 
     // Method called when option two button is clicked
@@ -121,11 +125,35 @@ public class HouseManager : MonoBehaviour
         HelpPanel.SetActive(true);
     }
 
+    // Method to show the help panel
+    public void ShowWatchHelpPanel()
+    {
+        // Deactivate joystick and touchscreen, fill help message, and activate help panel
+        TouchScreen.GetComponent<FixedTouchField>().TouchDist = new Vector2() { x = 0, y = 0 };
+        Joystick.GetComponent<Joystick>().OnPointerUp(null);
+        Joystick.SetActive(false);
+        TouchScreen.SetActive(false);
+        UIManager.FillInfoPanelWIthWatchMessage();
+        HelpPanel.SetActive(true);
+    }
+
     // Method to close the help panel
     public void CloseHelpPanel()
     {
         HelpPanel.SetActive(false);
         Joystick.SetActive(true);
         TouchScreen.SetActive(true);
+        Joystick.GetComponent<FixedJoystick>().DeadZone = 0;
+    }
+
+    private IEnumerator WaitToFindWatch()
+    {
+        yield return new WaitForSeconds(DelayInSeconds);
+
+        // Check if the watch was found
+        if (!WatchFound)
+        {
+            this.ShowWatchHelpPanel();
+        }
     }
 }

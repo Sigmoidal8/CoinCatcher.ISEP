@@ -153,5 +153,7 @@ public enum LanguageFields
     // Alert for missing username
     alert,
     // Fill with username message
-    username_input
+    username_input,
+    // Message if the user doesnt find the watch
+    watch_help_message
 }

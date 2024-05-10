@@ -9,6 +9,7 @@ public class ClickWatch : ClickButton
     public GameObject Joystick;
     public GameObject Question;
     public SceneController SceneController;
+    public HouseManager HouseManager;
 
     // Override the Action method to perform specific actions when the watch is clicked
     public override void Action()
@@ -17,5 +18,6 @@ public class ClickWatch : ClickButton
         Joystick.SetActive(false);
         Question.SetActive(true);
         SceneController.GetCurrentMoralDilemmaData().Timestamps.StartTimer();
+        HouseManager.WatchFound = true;
     }
 }

@@ -4665,6 +4665,7 @@ MonoBehaviour:
   Joystick: {fileID: 616961128}
   Question: {fileID: 649396691}
   SceneController: {fileID: 994476842}
+  HouseManager: {fileID: 933982865}
 --- !u!136 &814928028
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5387,6 +5388,8 @@ MonoBehaviour:
   HelpPanelButton: {fileID: 868567590}
   UIManager: {fileID: 933982862}
   SceneController: {fileID: 994476842}
+  DelayInSeconds: 30
+  WatchFound: 0
 --- !u!1 &936667374
 GameObject:
   m_ObjectHideFlags: 0

@@ -203,6 +203,10 @@
         {
             "key": "username_input",
             "value": "Fill with the username"
+        },
+        {
+            "key": "watch_help_message",
+            "value": "My father used to sit on the corner of the table, hope that helps you!"
         }
     ]
 }

@@ -205,5 +205,10 @@
             "key": "username_input",
             "value": "Preencha com o username"
         }
+        ,
+        {
+            "key": "watch_help_message",
+            "value": "O meu pai costumava-se sentar num dos cantos da mesa, espero que isso te ajude!"
+        }
     ]
 }

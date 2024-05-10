@@ -52,4 +52,10 @@ public class HouseSceneUIManager : GeneralCanvasUIManager
     {
         WatchDilemaMessage.text = languageManager.GetLocalizedText(LanguageFields.watch_dilemma_closing_message.ToString());
     }
+
+    public void FillInfoPanelWIthWatchMessage()
+    {
+        this.HelpDilemmaMessage.text = languageManager.GetLocalizedText(LanguageFields.watch_help_message.ToString());
+        this.HelpDilemmaMessageClose.text = languageManager.GetLocalizedText(LanguageFields.close_button.ToString());
+    }
 }
