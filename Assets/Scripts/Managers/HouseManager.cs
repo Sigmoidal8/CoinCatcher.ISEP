@@ -28,7 +28,7 @@ public class HouseManager : MonoBehaviour
     public bool WatchFound = false;
 
     // Value indicating to ignore the option chosen in a dilemma
-    private static int IgnoreOptionDilemaValue = 2;
+    private static int IgnoreOptionDilemaValue = 3;
 
     // Start is called before the first frame update
     void Start()

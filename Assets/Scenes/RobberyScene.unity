@@ -15682,7 +15682,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 0.627451, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -47782,6 +47782,7 @@ GameObject:
   - component: {fileID: 2058329083}
   - component: {fileID: 2058329082}
   - component: {fileID: 2058329081}
+  - component: {fileID: 2058329084}
   m_Layer: 5
   m_Name: InfoButton
   m_TagString: Untagged
@@ -47903,6 +47904,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058329079}
   m_CullTransparentMesh: 1
+--- !u!114 &2058329084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058329079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef48f84dd7a5b2478d83a3760aa232b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextMeshPro: {fileID: 589959742}
+  FadeDuration: 1
 --- !u!1 &2058816842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8807943778251697540, guid: 2999814d98689124cabb8fa67591ad1e, type: 3}
