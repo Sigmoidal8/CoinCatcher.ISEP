@@ -3,9 +3,8 @@
 /// </summary>
 public enum Language
 {
-    // English language.
-    English,
-
     // Portuguese language.
-    Portuguese
+    Portuguese,
+    // English language.
+    English
 }

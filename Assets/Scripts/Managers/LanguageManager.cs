@@ -75,7 +75,7 @@ public class LanguageManager : MonoBehaviour
                 json = PortugueseLocalizationFile.text;
                 break;
             default:
-                json = EnglishLocalizationFile.text;
+                json = PortugueseLocalizationFile.text;
                 break;
         }
 
