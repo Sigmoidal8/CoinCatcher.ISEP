@@ -49,6 +49,6 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _EmissionIntensity: 0.700452
+    - _EmissionIntensity: 2.5378692
     m_Colors: []
   m_BuildTextureStacks: []

@@ -110,7 +110,7 @@
         },
         {
             "key": "homeless_dilemma_message",
-            "value": "What do you want to do?"
+            "value": "There's an homeless man on the floor.\nWhat do you want to do?"
         },
         {
             "key": "homeless_dilemma_message_button1",

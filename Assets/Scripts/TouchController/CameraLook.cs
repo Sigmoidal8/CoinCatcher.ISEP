@@ -37,4 +37,21 @@ public class CameraLook : MonoBehaviour
         // Rotate the player's body around the Y-axis based on X movement
         PlayerBody.Rotate(Vector3.up * XMove);
     }
+
+     // Method to set camera rotation to a specific direction
+    public void SetCameraRotation(Vector3 direction)
+    {
+        // Calculate rotation amounts based on mouse/touch input and sensitivity
+        XMove = direction.x;
+        YMove = direction.y;
+
+        // Adjust X rotation based on Y movement and clamp it to prevent over-rotation
+        XRotation -= YMove;
+        XRotation = Mathf.Clamp(XRotation, -90f, 90f);
+
+        // Apply rotation to the camera
+        transform.localRotation = Quaternion.Euler(XRotation, 0, 0);
+        // Rotate the player's body around the Y-axis based on X movement
+        PlayerBody.Rotate(Vector3.up * XMove);
+    }
 }

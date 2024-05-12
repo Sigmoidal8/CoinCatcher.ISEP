@@ -20,8 +20,11 @@ public class MetroManager : MonoBehaviour
     public MetroSceneUIManager UIManager;
     public SceneController SceneController;
 
-    [Header("Homeless Coinst")]
+    [Header("Homeless Coins")]
     public GameObject HomelessCoins;
+
+    [Header("TouchScreen")]
+    public CameraLook Camera;
 
     // Value indicating to remove coins from homeless option
     private static int RemoveCoinsFromHomelessOption = 2;
@@ -33,8 +36,17 @@ public class MetroManager : MonoBehaviour
         if (SceneController.IsSceneDilemaCompleted())
         {
             gameObject.SetActive(false);
+            DilemaMessagePanel.SetActive(false);
             TouchScreen.SetActive(true);
             Joystick.SetActive(true);
+        }
+        else
+        {
+            Camera.SetCameraRotation(new Vector3(0, -16, 0));
+            TouchScreen.SetActive(false);
+            Joystick.SetActive(false);
+            // Start the timer for the current moral dilemma data
+            SceneController.GetCurrentMoralDilemmaData().Timestamps.StartTimer();
         }
         // Check if the scene is resolved with the option to remove coins from homeless
         if (SceneController.IsSceneResolvedWithValue(RemoveCoinsFromHomelessOption))
